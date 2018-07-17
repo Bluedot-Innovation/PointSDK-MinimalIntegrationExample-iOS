@@ -31,9 +31,7 @@ class AuthenticationHandler {
     func authenticate(){
         
         locationManager!.authenticate (
-            withApiKey: apiKey,
-            packageName: packageName,
-            username: username
+            withApiKey: apiKey
         )
         
     }

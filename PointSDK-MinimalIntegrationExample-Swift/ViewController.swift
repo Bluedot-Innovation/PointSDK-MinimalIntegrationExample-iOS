@@ -81,7 +81,7 @@ class ViewController: UIViewController {
 //MARK:- Conform to BDPSessionDelegate protocol - Point SDK's session related callbacks
 extension ViewController : BDPSessionDelegate {
     
-    func willAuthenticate( withUsername username: String!, apiKey: String!, packageName: String! )
+    func willAuthenticate(withApiKey: String!)
     {
         print( "Authenticating with Point sdk" )
     }

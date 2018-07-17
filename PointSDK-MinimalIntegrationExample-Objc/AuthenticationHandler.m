@@ -38,9 +38,7 @@
     
     if ( locationManager.authenticationState == BDAuthenticationStateNotAuthenticated )
     {
-        [ locationManager authenticateWithApiKey: _apiKey
-                                     packageName: _packageName
-                                        username: _userName ];
+        [locationManager authenticateWithApiKey: _apiKey];
         
     }
     

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06F49534745D3DEC3F788D6A /* Pods_PointSDK_MinimalIntegrationExample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345B40BB2BD8E2B74565A975 /* Pods_PointSDK_MinimalIntegrationExample_Swift.framework */; };
 		3C02C485207F1F79008CA191 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02C484207F1F79008CA191 /* AppDelegate.m */; };
 		3C02C488207F1F79008CA191 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02C487207F1F79008CA191 /* ViewController.m */; };
 		3C02C48B207F1F79008CA191 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C02C489207F1F79008CA191 /* Main.storyboard */; };
@@ -33,7 +32,6 @@
 		3C89FDA4207C7A12002FC3D4 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C89FDA3207C7A12002FC3D4 /* CoreMotion.framework */; };
 		3C89FDA6207C7A1B002FC3D4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C89FDA5207C7A1B002FC3D4 /* CoreLocation.framework */; };
 		3C89FDA8207C7A85002FC3D4 /* AuthenticationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C89FDA7207C7A85002FC3D4 /* AuthenticationHandler.swift */; };
-		BE008BFDF224A8D9C4D3A893 /* Pods_PointSDK_MinimalIntegrationExample_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D13878F2963C1890AECC15 /* Pods_PointSDK_MinimalIntegrationExample_Objc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -50,8 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		345B40BB2BD8E2B74565A975 /* Pods_PointSDK_MinimalIntegrationExample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PointSDK_MinimalIntegrationExample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C02C481207F1F79008CA191 /* PointSDK-MinimalIntegrationExample-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PointSDK-MinimalIntegrationExample-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C02C481207F1F79008CA191 /* PointSDK Objc Minimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PointSDK Objc Minimal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C02C483207F1F79008CA191 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C02C484207F1F79008CA191 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3C02C486207F1F79008CA191 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -63,7 +60,7 @@
 		3C02C492207F1F7B008CA191 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C02C497207F2076008CA191 /* AuthenticationHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticationHandler.h; sourceTree = "<group>"; };
 		3C02C498207F208D008CA191 /* AuthenticationHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticationHandler.m; sourceTree = "<group>"; };
-		3C89FD65207C799B002FC3D4 /* PointSDK-MinimalIntegrationExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PointSDK-MinimalIntegrationExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C89FD65207C799B002FC3D4 /* PointSDK Swift Minimal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PointSDK Swift Minimal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C89FD68207C799B002FC3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C89FD6A207C799B002FC3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C89FD6D207C799B002FC3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,11 +74,6 @@
 		3C89FDA3207C7A12002FC3D4 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		3C89FDA5207C7A1B002FC3D4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3C89FDA7207C7A85002FC3D4 /* AuthenticationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHandler.swift; sourceTree = "<group>"; };
-		72703A12A552A567F865E50C /* Pods-PointSDK-MinimalIntegrationExample-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-MinimalIntegrationExample-Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc.debug.xcconfig"; sourceTree = "<group>"; };
-		BCDDBE546E9E75C927BF7BA2 /* Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig"; sourceTree = "<group>"; };
-		E5CF4E129054494C6862C3F7 /* Pods-PointSDK-MinimalIntegrationExample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-MinimalIntegrationExample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		E5D13878F2963C1890AECC15 /* Pods_PointSDK_MinimalIntegrationExample_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PointSDK_MinimalIntegrationExample_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF778961A9280A42A7477781 /* Pods-PointSDK-MinimalIntegrationExample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-MinimalIntegrationExample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +87,6 @@
 				3C02C4A0207F29AD008CA191 /* SystemConfiguration.framework in Frameworks */,
 				3C02C49F207F299F008CA191 /* CoreMotion.framework in Frameworks */,
 				3C02C49E207F2996008CA191 /* CoreLocation.framework in Frameworks */,
-				BE008BFDF224A8D9C4D3A893 /* Pods_PointSDK_MinimalIntegrationExample_Objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +100,6 @@
 				3C89FDA0207C79FC002FC3D4 /* MapKit.framework in Frameworks */,
 				3C89FD9E207C79F2002FC3D4 /* CoreGraphics.framework in Frameworks */,
 				3C89FD9C207C79E9002FC3D4 /* UIKit.framework in Frameworks */,
-				06F49534745D3DEC3F788D6A /* Pods_PointSDK_MinimalIntegrationExample_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,15 +131,14 @@
 				3C02C482207F1F79008CA191 /* PointSDK-MinimalIntegrationExample-Objc */,
 				3C89FD66207C799B002FC3D4 /* Products */,
 				3C89FD9A207C79E9002FC3D4 /* Frameworks */,
-				6151D111F85AE15740F60CCD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		3C89FD66207C799B002FC3D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C89FD65207C799B002FC3D4 /* PointSDK-MinimalIntegrationExample-Swift.app */,
-				3C02C481207F1F79008CA191 /* PointSDK-MinimalIntegrationExample-Objc.app */,
+				3C89FD65207C799B002FC3D4 /* PointSDK Swift Minimal.app */,
+				3C02C481207F1F79008CA191 /* PointSDK Objc Minimal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,21 +166,8 @@
 				3C89FD9F207C79FC002FC3D4 /* MapKit.framework */,
 				3C89FD9D207C79F2002FC3D4 /* CoreGraphics.framework */,
 				3C89FD9B207C79E9002FC3D4 /* UIKit.framework */,
-				E5D13878F2963C1890AECC15 /* Pods_PointSDK_MinimalIntegrationExample_Objc.framework */,
-				345B40BB2BD8E2B74565A975 /* Pods_PointSDK_MinimalIntegrationExample_Swift.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6151D111F85AE15740F60CCD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				72703A12A552A567F865E50C /* Pods-PointSDK-MinimalIntegrationExample-Objc.debug.xcconfig */,
-				BCDDBE546E9E75C927BF7BA2 /* Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig */,
-				FF778961A9280A42A7477781 /* Pods-PointSDK-MinimalIntegrationExample-Swift.debug.xcconfig */,
-				E5CF4E129054494C6862C3F7 /* Pods-PointSDK-MinimalIntegrationExample-Swift.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,12 +177,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C02C494207F1F7B008CA191 /* Build configuration list for PBXNativeTarget "PointSDK-MinimalIntegrationExample-Objc" */;
 			buildPhases = (
-				A51ED0BCBA90338444EA3CC3 /* [CP] Check Pods Manifest.lock */,
 				3C02C47D207F1F79008CA191 /* Sources */,
 				3C02C47E207F1F79008CA191 /* Frameworks */,
 				3C02C47F207F1F79008CA191 /* Resources */,
-				873B0FE64F6EB46F82D6D7A0 /* [CP] Embed Pods Frameworks */,
-				0038A405E1745DBDC9E2B3F1 /* [CP] Copy Pods Resources */,
 				3C02C4A4207F29F8008CA191 /* Strip Symbols */,
 			);
 			buildRules = (
@@ -215,20 +188,17 @@
 			);
 			name = "PointSDK-MinimalIntegrationExample-Objc";
 			productName = "PointSDK-MinimalIntegrationExample-Objc";
-			productReference = 3C02C481207F1F79008CA191 /* PointSDK-MinimalIntegrationExample-Objc.app */;
+			productReference = 3C02C481207F1F79008CA191 /* PointSDK Objc Minimal.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3C89FD64207C799B002FC3D4 /* PointSDK-MinimalIntegrationExample-Swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C89FD8D207C799B002FC3D4 /* Build configuration list for PBXNativeTarget "PointSDK-MinimalIntegrationExample-Swift" */;
 			buildPhases = (
-				77362B57FE7E48806CFA1814 /* [CP] Check Pods Manifest.lock */,
 				3C89FD61207C799B002FC3D4 /* Sources */,
 				3C89FD62207C799B002FC3D4 /* Frameworks */,
 				3C89FD63207C799B002FC3D4 /* Resources */,
 				3C7BCC3D207DCE12001D8880 /* Embed Frameworks */,
-				4B9C8B7EA93474F57FB519C4 /* [CP] Embed Pods Frameworks */,
-				FC91121047C08E70BC70018B /* [CP] Copy Pods Resources */,
 				3C66A6EB207DA5A200A9CBF0 /* Strip Symbols */,
 			);
 			buildRules = (
@@ -237,7 +207,7 @@
 			);
 			name = "PointSDK-MinimalIntegrationExample-Swift";
 			productName = "PointSDK-MinimalIntegrationExample-iOS-Swift";
-			productReference = 3C89FD65207C799B002FC3D4 /* PointSDK-MinimalIntegrationExample-Swift.app */;
+			productReference = 3C89FD65207C799B002FC3D4 /* PointSDK Swift Minimal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -301,21 +271,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0038A405E1745DBDC9E2B3F1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3C02C4A4207F29F8008CA191 /* Strip Symbols */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,93 +299,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#/bin/bash\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\n# This script loops through the frameworks embedded in the application and\n# removes unused architectures.\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\n\nEXTRACTED_ARCHS=()\n\nfor ARCH in $ARCHS\ndo\necho \"Extracting $ARCH from $FRAMEWORK_EXECUTABLE_NAME\"\nlipo -extract \"$ARCH\" \"$FRAMEWORK_EXECUTABLE_PATH\" -o \"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\"\nEXTRACTED_ARCHS+=(\"$FRAMEWORK_EXECUTABLE_PATH-$ARCH\")\ndone\n\necho \"Merging extracted architectures: ${ARCHS}\"\nlipo -o \"$FRAMEWORK_EXECUTABLE_PATH-merged\" -create \"${EXTRACTED_ARCHS[@]}\"\nrm \"${EXTRACTED_ARCHS[@]}\"\n\necho \"Replacing original executable with thinned version\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_EXECUTABLE_PATH-merged\" \"$FRAMEWORK_EXECUTABLE_PATH\"\n\ndone";
-		};
-		4B9C8B7EA93474F57FB519C4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks.sh",
-				"${PODS_ROOT}/BluedotPointSDK/PointSDK/BDPointSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDPointSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		77362B57FE7E48806CFA1814 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PointSDK-MinimalIntegrationExample-Swift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		873B0FE64F6EB46F82D6D7A0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks.sh",
-				"${PODS_ROOT}/BluedotPointSDK/PointSDK/BDPointSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDPointSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A51ED0BCBA90338444EA3CC3 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PointSDK-MinimalIntegrationExample-Objc-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FC91121047C08E70BC70018B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -496,13 +364,12 @@
 /* Begin XCBuildConfiguration section */
 		3C02C495207F1F7B008CA191 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72703A12A552A567F865E50C /* Pods-PointSDK-MinimalIntegrationExample-Objc.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9H7C75E224;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,23 +381,22 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppObjc;
+				PRODUCT_NAME = "PointSDK Objc Minimal";
+				PROVISIONING_PROFILE = "5da42ad5-824b-4b74-9ab0-a56dc2af2fe2";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development au.com.bluedot.*";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		3C02C496207F1F7B008CA191 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCDDBE546E9E75C927BF7BA2 /* Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9H7C75E224;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -542,10 +408,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppObjc;
+				PRODUCT_NAME = "PointSDK Objc Minimal";
+				PROVISIONING_PROFILE = "d269a44d-1466-4aef-bf94-a1dc2ed3acec";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc au.com.bluedot.*";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -666,13 +532,12 @@
 		};
 		3C89FD8E207C799B002FC3D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF778961A9280A42A7477781 /* Pods-PointSDK-MinimalIntegrationExample-Swift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9H7C75E224;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -684,10 +549,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppSwift;
+				PRODUCT_NAME = "PointSDK Swift Minimal";
+				PROVISIONING_PROFILE = "5da42ad5-824b-4b74-9ab0-a56dc2af2fe2";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development au.com.bluedot.*";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -695,13 +560,12 @@
 		};
 		3C89FD8F207C799B002FC3D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5CF4E129054494C6862C3F7 /* Pods-PointSDK-MinimalIntegrationExample-Swift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9H7C75E224;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -713,10 +577,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppSwift;
+				PRODUCT_NAME = "PointSDK Swift Minimal";
+				PROVISIONING_PROFILE = "d269a44d-1466-4aef-bf94-a1dc2ed3acec";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc au.com.bluedot.*";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

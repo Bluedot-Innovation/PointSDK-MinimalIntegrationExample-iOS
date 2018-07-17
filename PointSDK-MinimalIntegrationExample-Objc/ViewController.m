@@ -89,9 +89,7 @@ NSString  *EXResponseError = @"BDResponseErrorInfoKeyName";
 
 //MARK:- Conform to BDPSessionDelegate protocol - Point SDK's session related callbacks
 
-- (void)willAuthenticateWithUsername: (NSString *)username
-                              apiKey: (NSString *)apiKey
-                         packageName: (NSString *)packageName
+- (void)willAuthenticateWithApiKey: (NSString *)apiKey
 {
     NSLog( @"Authenticating with Point sdk" );
 }
