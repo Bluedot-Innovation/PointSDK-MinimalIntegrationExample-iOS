@@ -10,11 +10,9 @@
 
 @interface AuthenticationHandler : NSObject
 
-@property NSString * userName;
 @property NSString * apiKey;
-@property NSString * packageName;
 
--(id)initWithUserName: (NSString *) userName andApiKey: (NSString *) apiKey andPackageName: (NSString *)packageName;
+-(id)initWithApiKey: (NSString *) apiKey;
 
 -(void)authenticate;
 

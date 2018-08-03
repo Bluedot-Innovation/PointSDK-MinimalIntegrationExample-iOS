@@ -28,12 +28,6 @@ BDLocationManager  *locationManager = nil;
 //Add API key for the App
 NSString  *apiKey = @"";
 
-//Add Package name for the App
-NSString  *packageName = @"";
-
-//Add Registration email Id
-NSString  *username = @"";
-
 NSString  *EXResponseError = @"BDResponseErrorInfoKeyName";
 
 
@@ -52,7 +46,7 @@ NSString  *EXResponseError = @"BDResponseErrorInfoKeyName";
     {
         case BDAuthenticationStateNotAuthenticated:
         {
-            AuthenticationHandler *authenticationHandler = [[AuthenticationHandler alloc] initWithUserName: username andApiKey:  apiKey andPackageName:  packageName];
+            AuthenticationHandler *authenticationHandler = [[AuthenticationHandler alloc] initWithApiKey:  apiKey];
             
             [ authenticationHandler authenticate ];
             

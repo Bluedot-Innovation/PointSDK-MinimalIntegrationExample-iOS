@@ -17,15 +17,13 @@
 
 @implementation AuthenticationHandler
 
--(id)initWithUserName: (NSString *) userName andApiKey: (NSString *) apiKey andPackageName: (NSString *)packageName
+-(id)initWithApiKey: (NSString *) apiKey
 {
     self = [super init];
     
     if (self)
     {
         self.apiKey = apiKey;
-        self.userName = userName;
-        self.packageName = packageName;
     }
     
     return self;
