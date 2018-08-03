@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         locationManager?.sessionDelegate  = self
         
         //MARK: Authenticate
-        authenticationHandler = AuthenticationHandler(apikey: apiKey , packageName: packageName, username: username)
+        authenticationHandler = AuthenticationHandler(apikey: apiKey)
         
         //Determine the authetication state
         switch locationManager!.authenticationState
