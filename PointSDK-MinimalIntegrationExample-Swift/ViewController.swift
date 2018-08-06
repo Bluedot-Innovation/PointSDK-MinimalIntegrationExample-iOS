@@ -19,12 +19,6 @@ class ViewController: UIViewController {
     //Add API key for the App
     var apiKey : String = ""
     
-    //Add Package name for the App
-    var packageName : String = ""
-    
-    //Add Registration email Id
-    var username : String = ""
-    
     let dateFormatter = DateFormatter()
     
     var userInterventionForBluetoothDialog                  : UIAlertController?
