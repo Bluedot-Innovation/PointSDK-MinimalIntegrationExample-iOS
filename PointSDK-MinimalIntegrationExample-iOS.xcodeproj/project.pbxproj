@@ -308,7 +308,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks.sh",
 				"${PODS_ROOT}/BluedotPointSDK/PointSDK/BDPointSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -319,7 +319,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3232D9D53B06D9CE5E3E01BE /* [CP] Check Pods Manifest.lock */ = {
@@ -381,7 +381,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks.sh",
 				"${PODS_ROOT}/BluedotPointSDK/PointSDK/BDPointSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -392,7 +392,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5B90A8EFE7F9F05017084E7A /* [CP] Check Pods Manifest.lock */ = {
@@ -674,7 +674,7 @@
 				PRODUCT_NAME = "PointSDK Swift Minimal";
 				PROVISIONING_PROFILE = "5da42ad5-824b-4b74-9ab0-a56dc2af2fe2";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development au.com.bluedot.*";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -703,7 +703,7 @@
 				PRODUCT_NAME = "PointSDK Swift Minimal";
 				PROVISIONING_PROFILE = "d269a44d-1466-4aef-bf94-a1dc2ed3acec";
 				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc au.com.bluedot.*";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

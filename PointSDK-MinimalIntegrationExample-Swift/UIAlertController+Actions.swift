@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 extension UIAlertController {
-    convenience init(title: String, message: String, style: UIAlertControllerStyle, actions: UIAlertAction...) {
+    convenience init(title: String, message: String, style: UIAlertController.Style, actions: UIAlertAction...) {
         self.init(title: title, message: message, preferredStyle: style)
         actions.forEach{ self.addAction($0) }
     }

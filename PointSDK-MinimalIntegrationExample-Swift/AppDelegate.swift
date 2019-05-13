@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIAlertController(title: title, message: message, style: .alert, actions: okAction, dismissAction)
     }()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         BDLocationManager.instance()?.sessionDelegate = self
@@ -104,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let content = UNMutableNotificationContent()
             content.title = "BDPoint notification"
             content.body = message
-            content.sound = UNNotificationSound.default()
+            content.sound = UNNotificationSound.default
             
             let request = UNNotificationRequest(identifier: "BDPointNotification", content: content, trigger: nil)
             
