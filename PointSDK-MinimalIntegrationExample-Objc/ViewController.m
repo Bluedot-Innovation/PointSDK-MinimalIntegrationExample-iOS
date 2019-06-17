@@ -26,8 +26,9 @@ NSString  *apiKey = @"";
     switch( BDLocationManager.instance.authenticationState )
     {
         case BDAuthenticationStateNotAuthenticated:
-        {            
-            [BDLocationManager.instance authenticateWithApiKey: apiKey];
+        {
+            [BDLocationManager.instance authenticateWithApiKey: apiKey
+                                          requestAuthorization: authorizedAlways];
             
             break;
         }

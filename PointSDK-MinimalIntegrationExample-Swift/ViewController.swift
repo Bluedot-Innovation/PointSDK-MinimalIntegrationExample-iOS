@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         //Determine the authetication state
         switch BDLocationManager.instance()!.authenticationState {
         case .notAuthenticated:
-            BDLocationManager.instance()?.authenticate(withApiKey: apiKey)
+            BDLocationManager.instance()?.authenticate(withApiKey: apiKey, requestAuthorization: BDAuthorizationLevel.authorizedAlways)
         default:
             break
         }
