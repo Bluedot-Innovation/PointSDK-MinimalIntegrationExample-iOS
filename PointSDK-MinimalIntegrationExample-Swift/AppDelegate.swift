@@ -11,6 +11,7 @@ import UIKit
 import UserNotifications
 import CoreLocation
 import BDPointSDK
+import CoreBluetooth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,15 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var authorizationStatus: CLAuthorizationStatus = .notDetermined
+    var centralManager: CBCentralManager?
+    var isBluetoothEnabled = false
     
-    let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
     let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
     
     lazy var userInterventionForBluetoothDialog: UIAlertController = {
         let title = "Bluetooth Required"
         let message = "There are nearby Beacons which cannot be detected because Bluetooth is disabled. Re-enable Bluetooth to restore full functionality."
         
-        return UIAlertController(title: title, message: message, style: .alert, actions: okAction, dismissAction)
+        return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
     }()
     
     lazy var userInterventionForLocationServicesNeverDialog: UIAlertController = {
@@ -34,21 +36,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let title = "Location Services Required"
         let message = "This App requires Location Services which are currently set to \(authorizationStatus == .authorizedWhenInUse ? "while in using" : "disabled").  To restore Location Services, go to :\nSettings → Privacy →\nLocation Settings →\n\(String(describing: appName)) ✓"
         
-        return UIAlertController(title: title, message: message, style: .alert, actions: okAction)
+        return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
     }()
     
     lazy var userInterventionForLocationServicesWhileInUseDialog: UIAlertController = {
         let title = "Location Services set to 'While in Use'"
         let message = "You can ask for further location permission from user via this delegate method"
         
-        return UIAlertController(title: title, message: message, style: .alert, actions: okAction, dismissAction)
+        return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
     }()
     
     lazy var userInterventionForPowerModeDialog: UIAlertController = {
         let title   = "Low Power Mode"
         let message = "Low Power Mode has been enabled on this device.  To restore full location precision, disable the setting at :\nSettings → Battery → Low Power Mode"
         
-        return UIAlertController(title: title, message: message, style: .alert, actions: okAction, dismissAction)
+        return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
     }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -56,6 +58,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         BDLocationManager.instance()?.sessionDelegate = self
         BDLocationManager.instance()?.locationDelegate = self
+        centralManager = CBCentralManager(delegate: self,
+                                          queue: nil,
+                                          options: [CBCentralManagerOptionShowPowerAlertKey: NSNumber(booleanLiteral: false)])
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
             if !accepted {
@@ -95,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         switch applicationState
         {
         case .active: // In the fore-ground, display notification directly to the user
-            let alertController = UIAlertController(title: title, message: message, style: .alert, actions: okAction)
+            let alertController = UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
 
             self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
             

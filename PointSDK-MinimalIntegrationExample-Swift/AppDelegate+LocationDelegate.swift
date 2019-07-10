@@ -88,6 +88,10 @@ extension AppDelegate: BDPLocationDelegate {
     func didStartRequiringUserInterventionForBluetooth() {
         print("didStartRequiringUserInterventionForBluetooth called")
         
+        if isBluetoothEnabled == true {
+            return
+        }
+        
         self.window?.rootViewController?.present(userInterventionForBluetoothDialog, animated: true, completion: nil)
     }
     
@@ -95,6 +99,11 @@ extension AppDelegate: BDPLocationDelegate {
     
     func didStopRequiringUserInterventionForBluetooth() {
         print("didStopRequiringUserInterventionForBluetooth called")
+        
+        if isBluetoothEnabled == false {
+            return
+        }
+        
         userInterventionForBluetoothDialog.dismiss(animated: true, completion: nil)
     }
     
