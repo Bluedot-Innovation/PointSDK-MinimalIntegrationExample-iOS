@@ -9,14 +9,17 @@
 #import "AppDelegate.h"
 @import UserNotifications;
 @import BDPointSDK;
+@import CoreBluetooth;
 
-@interface AppDelegate() <BDPSessionDelegate, BDPLocationDelegate>
+@interface AppDelegate() <BDPSessionDelegate, BDPLocationDelegate, CBCentralManagerDelegate>
 
 @property (nonatomic) NSDateFormatter    *dateFormatter;
 @property (nonatomic) UIAlertController  *userInterventionForBluetoothDialog;
 @property (nonatomic) UIAlertController  *userInterventionForLocationServicesNeverDialog;
 @property (nonatomic) UIAlertController  *userInterventionForLocationServicesWhileInUseDialog;
 @property (nonatomic) UIAlertController  *userInterventionForPowerModeDialog;
+@property (nonatomic) CBCentralManager   *centralManager;
+@property (nonatomic) BOOL                isBluetoothAvailable;
 
 @end
 
@@ -30,6 +33,9 @@ NSString  *EXResponseError = @"BDResponseErrorInfoKeyName";
     //Assign the delegates for session handling and location updates to this class.
     BDLocationManager.instance.sessionDelegate = self;
     BDLocationManager.instance.locationDelegate = self;
+    _centralManager = [[CBCentralManager alloc] initWithDelegate:self
+                                                           queue:nil
+                                                         options:@{CBCentralManagerOptionShowPowerAlertKey : @(NO)}];
     
     //request authorization for notification
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -248,6 +254,10 @@ NSString  *EXResponseError = @"BDResponseErrorInfoKeyName";
 //MARK: This method is part of the Bluedot location delegate and is called when Bluetooth is required by the SDK but is not enabled on the device; requiring user intervention.
 - (void)didStartRequiringUserInterventionForBluetooth
 {
+    if (_isBluetoothAvailable == true) {
+        return;
+    }
+    
     if ( _userInterventionForBluetoothDialog == nil )
     {
         NSString  *title = @"Bluetooth Required";
@@ -269,6 +279,10 @@ NSString  *EXResponseError = @"BDResponseErrorInfoKeyName";
 
 - (void)didStopRequiringUserInterventionForBluetooth
 {
+    if (_isBluetoothAvailable == false) {
+        return;
+    }
+    
     [ _userInterventionForBluetoothDialog dismissViewControllerAnimated: YES completion: nil ];
 }
 
@@ -378,6 +392,11 @@ NSString  *EXResponseError = @"BDResponseErrorInfoKeyName";
 - (void)didStopRequiringUserInterventionForPowerMode
 {
     [ _userInterventionForPowerModeDialog dismissViewControllerAnimated: YES completion: nil ];
+}
+
+//MARK:- CBCentralManagerDelegate
+- (void)centralManagerDidUpdateState:(CBCentralManager *)central {
+    _isBluetoothAvailable = central.state == CBManagerStatePoweredOn;
 }
 
 //MARK:-  Post a notifiction message.
