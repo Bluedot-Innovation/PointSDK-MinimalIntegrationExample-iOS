@@ -35,6 +35,7 @@
 		E11A3CBA21ABAE3400AD5102 /* AppDelegate+BDPSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11A3CB921ABAE3400AD5102 /* AppDelegate+BDPSessionDelegate.swift */; };
 		E11A3CBE21ABB19900AD5102 /* UIAlertController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */; };
 		E11A3CBF21ABB78D00AD5102 /* AppDelegate+LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11A3CBB21ABAE4600AD5102 /* AppDelegate+LocationDelegate.swift */; };
+		E156ACE522DC506C00E85F9B /* AppDelegate+CBCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156ACE422DC506C00E85F9B /* AppDelegate+CBCentralManagerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +84,7 @@
 		E11A3CB921ABAE3400AD5102 /* AppDelegate+BDPSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+BDPSessionDelegate.swift"; sourceTree = "<group>"; };
 		E11A3CBB21ABAE4600AD5102 /* AppDelegate+LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+LocationDelegate.swift"; sourceTree = "<group>"; };
 		E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Actions.swift"; sourceTree = "<group>"; };
+		E156ACE422DC506C00E85F9B /* AppDelegate+CBCentralManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CBCentralManagerDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,13 +160,14 @@
 			children = (
 				3C89FD68207C799B002FC3D4 /* AppDelegate.swift */,
 				E11A3CB921ABAE3400AD5102 /* AppDelegate+BDPSessionDelegate.swift */,
+				E156ACE422DC506C00E85F9B /* AppDelegate+CBCentralManagerDelegate.swift */,
 				E11A3CBB21ABAE4600AD5102 /* AppDelegate+LocationDelegate.swift */,
 				3C89FD6F207C799B002FC3D4 /* Assets.xcassets */,
 				3C89FD74207C799B002FC3D4 /* Info.plist */,
 				3C89FD71207C799B002FC3D4 /* LaunchScreen.storyboard */,
 				3C89FD6C207C799B002FC3D4 /* Main.storyboard */,
-				3C89FD6A207C799B002FC3D4 /* ViewController.swift */,
 				E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */,
+				3C89FD6A207C799B002FC3D4 /* ViewController.swift */,
 			);
 			path = "PointSDK-MinimalIntegrationExample-Swift";
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			files = (
 				3C89FD6B207C799B002FC3D4 /* ViewController.swift in Sources */,
 				3C89FD69207C799B002FC3D4 /* AppDelegate.swift in Sources */,
+				E156ACE522DC506C00E85F9B /* AppDelegate+CBCentralManagerDelegate.swift in Sources */,
 				E11A3CBA21ABAE3400AD5102 /* AppDelegate+BDPSessionDelegate.swift in Sources */,
 				E11A3CBF21ABB78D00AD5102 /* AppDelegate+LocationDelegate.swift in Sources */,
 				E11A3CBE21ABB19900AD5102 /* UIAlertController+Actions.swift in Sources */,
