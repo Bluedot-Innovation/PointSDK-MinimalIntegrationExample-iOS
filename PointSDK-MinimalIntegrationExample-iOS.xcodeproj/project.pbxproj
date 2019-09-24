@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -257,6 +257,7 @@
 					};
 					3C89FD64207C799B002FC3D4 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1100;
 					};
 				};
 			};
@@ -309,16 +310,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks.sh",
-				"${PODS_ROOT}/BluedotPointSDK/PointSDK/BDPointSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDPointSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -382,16 +378,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks.sh",
-				"${PODS_ROOT}/BluedotPointSDK/PointSDK/BDPointSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BDPointSDK.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Swift/Pods-PointSDK-MinimalIntegrationExample-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -490,8 +481,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -506,8 +497,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppObjc;
 				PRODUCT_NAME = "PointSDK Objc Minimal";
-				PROVISIONING_PROFILE = "5da42ad5-824b-4b74-9ab0-a56dc2af2fe2";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development au.com.bluedot.*";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -518,8 +508,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -534,8 +524,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppObjc;
 				PRODUCT_NAME = "PointSDK Objc Minimal";
-				PROVISIONING_PROFILE = "d269a44d-1466-4aef-bf94-a1dc2ed3acec";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc au.com.bluedot.*";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -660,8 +649,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -676,9 +665,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppSwift;
 				PRODUCT_NAME = "PointSDK Swift Minimal";
-				PROVISIONING_PROFILE = "5da42ad5-824b-4b74-9ab0-a56dc2af2fe2";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development au.com.bluedot.*";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -689,8 +677,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -705,9 +693,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppSwift;
 				PRODUCT_NAME = "PointSDK Swift Minimal";
-				PROVISIONING_PROFILE = "d269a44d-1466-4aef-bf94-a1dc2ed3acec";
-				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc au.com.bluedot.*";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
