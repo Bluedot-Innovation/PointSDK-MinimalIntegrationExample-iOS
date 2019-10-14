@@ -1,0 +1,28 @@
+variables:
+  DEFAULT_XCODE_VERSION: "11.0"
+
+cache:
+  paths:
+    - vendor/ruby
+
+stages:
+  - test
+
+before_script:
+  - rbenv install --skip-existing
+  - gem install bundler --no-document    # Bundler is not installed with the image
+  - bundle install --path vendor
+
+ui-tests-objc:
+  tags:
+  - ios
+  stage: test
+  script:
+    - bundle exec fastlane ui_test xcode:"${DEFAULT_XCODE_VERSION}" app:"PointSDK-MinimalIntegrationExample-Objc""
+
+ui-tests-swift:
+  tags:
+    - ios
+  stage: test
+  script:
+    - bundle exec fastlane ui_test xcode:"${DEFAULT_XCODE_VERSION}" app:"PointSDK-MinimalIntegrationExample-Swift"
