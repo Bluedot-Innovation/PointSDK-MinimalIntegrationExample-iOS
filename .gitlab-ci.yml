@@ -18,7 +18,7 @@ ui-tests-objc:
   - ios
   stage: test
   script:
-    - bundle exec fastlane ui_test xcode:"${DEFAULT_XCODE_VERSION}" app:"PointSDK-MinimalIntegrationExample-Objc""
+    - bundle exec fastlane ui_test xcode:"${DEFAULT_XCODE_VERSION}" app:"PointSDK-MinimalIntegrationExample-Objc"
 
 ui-tests-swift:
   tags:
