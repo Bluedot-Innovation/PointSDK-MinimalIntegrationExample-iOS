@@ -1,5 +1,6 @@
 variables:
   DEFAULT_XCODE_VERSION: "11.0"
+  LC_ALL: 'en_US.UTF-8'
 
 cache:
   paths:
