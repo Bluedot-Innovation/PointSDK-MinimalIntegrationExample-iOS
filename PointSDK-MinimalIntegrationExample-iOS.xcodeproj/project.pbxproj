@@ -36,7 +36,26 @@
 		E11A3CBE21ABB19900AD5102 /* UIAlertController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */; };
 		E11A3CBF21ABB78D00AD5102 /* AppDelegate+LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11A3CBB21ABAE4600AD5102 /* AppDelegate+LocationDelegate.swift */; };
 		E156ACE522DC506C00E85F9B /* AppDelegate+CBCentralManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156ACE422DC506C00E85F9B /* AppDelegate+CBCentralManagerDelegate.swift */; };
+		E1741EFA2354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1741EF92354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift */; };
+		E1741F08235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1741F07235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E1741EFC2354379800F7E78E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C89FD5D207C799B002FC3D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C89FD64207C799B002FC3D4;
+			remoteInfo = "PointSDK-MinimalIntegrationExample-Swift";
+		};
+		E1741F0A235437AE00F7E78E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C89FD5D207C799B002FC3D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C02C480207F1F79008CA191;
+			remoteInfo = "PointSDK-MinimalIntegrationExample-Objc";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3C7BCC3D207DCE12001D8880 /* Embed Frameworks */ = {
@@ -85,6 +104,12 @@
 		E11A3CBB21ABAE4600AD5102 /* AppDelegate+LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+LocationDelegate.swift"; sourceTree = "<group>"; };
 		E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Actions.swift"; sourceTree = "<group>"; };
 		E156ACE422DC506C00E85F9B /* AppDelegate+CBCentralManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+CBCentralManagerDelegate.swift"; sourceTree = "<group>"; };
+		E1741EF72354379800F7E78E /* PointSDK-MinimalUITests-Swift.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PointSDK-MinimalUITests-Swift.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1741EF92354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointSDK_MinimalUITests_Swift.swift; sourceTree = "<group>"; };
+		E1741EFB2354379800F7E78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1741F05235437AE00F7E78E /* PointSDK-MinimalUITests-Objc.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PointSDK-MinimalUITests-Objc.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1741F07235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointSDK_MinimalUITests_Objc.swift; sourceTree = "<group>"; };
+		E1741F09235437AE00F7E78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +141,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1741EF42354379800F7E78E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1741F02235437AE00F7E78E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -140,6 +179,8 @@
 			children = (
 				3C89FD67207C799B002FC3D4 /* PointSDK-MinimalIntegrationExample-Swift */,
 				3C02C482207F1F79008CA191 /* PointSDK-MinimalIntegrationExample-Objc */,
+				E1741EF82354379800F7E78E /* PointSDK-MinimalUITests-Swift */,
+				E1741F06235437AE00F7E78E /* PointSDK-MinimalUITests-Objc */,
 				3C89FD66207C799B002FC3D4 /* Products */,
 				3C89FD9A207C79E9002FC3D4 /* Frameworks */,
 				43452E24533686C7B315B49E /* Pods */,
@@ -151,6 +192,8 @@
 			children = (
 				3C89FD65207C799B002FC3D4 /* PointSDK Swift Minimal.app */,
 				3C02C481207F1F79008CA191 /* PointSDK Objc Minimal.app */,
+				E1741EF72354379800F7E78E /* PointSDK-MinimalUITests-Swift.xctest */,
+				E1741F05235437AE00F7E78E /* PointSDK-MinimalUITests-Objc.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +241,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E1741EF82354379800F7E78E /* PointSDK-MinimalUITests-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				E1741EF92354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift */,
+				E1741EFB2354379800F7E78E /* Info.plist */,
+			);
+			path = "PointSDK-MinimalUITests-Swift";
+			sourceTree = "<group>";
+		};
+		E1741F06235437AE00F7E78E /* PointSDK-MinimalUITests-Objc */ = {
+			isa = PBXGroup;
+			children = (
+				E1741F07235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift */,
+				E1741F09235437AE00F7E78E /* Info.plist */,
+			);
+			path = "PointSDK-MinimalUITests-Objc";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,13 +303,49 @@
 			productReference = 3C89FD65207C799B002FC3D4 /* PointSDK Swift Minimal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E1741EF62354379800F7E78E /* PointSDK-MinimalUITests-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1741EFE2354379800F7E78E /* Build configuration list for PBXNativeTarget "PointSDK-MinimalUITests-Swift" */;
+			buildPhases = (
+				E1741EF32354379800F7E78E /* Sources */,
+				E1741EF42354379800F7E78E /* Frameworks */,
+				E1741EF52354379800F7E78E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1741EFD2354379800F7E78E /* PBXTargetDependency */,
+			);
+			name = "PointSDK-MinimalUITests-Swift";
+			productName = "PointSDK-MinimalUITests-Swift";
+			productReference = E1741EF72354379800F7E78E /* PointSDK-MinimalUITests-Swift.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		E1741F04235437AE00F7E78E /* PointSDK-MinimalUITests-Objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1741F0C235437AE00F7E78E /* Build configuration list for PBXNativeTarget "PointSDK-MinimalUITests-Objc" */;
+			buildPhases = (
+				E1741F01235437AE00F7E78E /* Sources */,
+				E1741F02235437AE00F7E78E /* Frameworks */,
+				E1741F03235437AE00F7E78E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1741F0B235437AE00F7E78E /* PBXTargetDependency */,
+			);
+			name = "PointSDK-MinimalUITests-Objc";
+			productName = "PointSDK-MinimalUITests-Objc";
+			productReference = E1741F05235437AE00F7E78E /* PointSDK-MinimalUITests-Objc.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3C89FD5D207C799B002FC3D4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Bluedot Innovation";
 				TargetAttributes = {
@@ -258,6 +355,14 @@
 					3C89FD64207C799B002FC3D4 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1100;
+					};
+					E1741EF62354379800F7E78E = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 3C89FD64207C799B002FC3D4;
+					};
+					E1741F04235437AE00F7E78E = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 3C02C480207F1F79008CA191;
 					};
 				};
 			};
@@ -276,6 +381,8 @@
 			targets = (
 				3C89FD64207C799B002FC3D4 /* PointSDK-MinimalIntegrationExample-Swift */,
 				3C02C480207F1F79008CA191 /* PointSDK-MinimalIntegrationExample-Objc */,
+				E1741EF62354379800F7E78E /* PointSDK-MinimalUITests-Swift */,
+				E1741F04235437AE00F7E78E /* PointSDK-MinimalUITests-Objc */,
 			);
 		};
 /* End PBXProject section */
@@ -298,6 +405,20 @@
 				3C89FD73207C799B002FC3D4 /* LaunchScreen.storyboard in Resources */,
 				3C89FD70207C799B002FC3D4 /* Assets.xcassets in Resources */,
 				3C89FD6E207C799B002FC3D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1741EF52354379800F7E78E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1741F03235437AE00F7E78E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +558,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E1741EF32354379800F7E78E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1741EFA2354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1741F01235437AE00F7E78E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1741F08235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E1741EFD2354379800F7E78E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C89FD64207C799B002FC3D4 /* PointSDK-MinimalIntegrationExample-Swift */;
+			targetProxy = E1741EFC2354379800F7E78E /* PBXContainerItemProxy */;
+		};
+		E1741F0B235437AE00F7E78E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C02C480207F1F79008CA191 /* PointSDK-MinimalIntegrationExample-Objc */;
+			targetProxy = E1741F0A235437AE00F7E78E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3C02C489207F1F79008CA191 /* Main.storyboard */ = {
@@ -699,6 +849,92 @@
 			};
 			name = Release;
 		};
+		E1741EFF2354379800F7E78E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9H7C75E224;
+				INFOPLIST_FILE = "PointSDK-MinimalUITests-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bluedot.PointSDK-MinimalUITests-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PointSDK-MinimalIntegrationExample-Swift";
+			};
+			name = Debug;
+		};
+		E1741F002354379800F7E78E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9H7C75E224;
+				INFOPLIST_FILE = "PointSDK-MinimalUITests-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bluedot.PointSDK-MinimalUITests-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PointSDK-MinimalIntegrationExample-Swift";
+			};
+			name = Release;
+		};
+		E1741F0D235437AE00F7E78E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9H7C75E224;
+				INFOPLIST_FILE = "PointSDK-MinimalUITests-Objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bluedot.PointSDK-MinimalUITests-Objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PointSDK-MinimalIntegrationExample-Objc";
+			};
+			name = Debug;
+		};
+		E1741F0E235437AE00F7E78E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9H7C75E224;
+				INFOPLIST_FILE = "PointSDK-MinimalUITests-Objc/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.bluedot.PointSDK-MinimalUITests-Objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "PointSDK-MinimalIntegrationExample-Objc";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -725,6 +961,24 @@
 			buildConfigurations = (
 				3C89FD8E207C799B002FC3D4 /* Debug */,
 				3C89FD8F207C799B002FC3D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1741EFE2354379800F7E78E /* Build configuration list for PBXNativeTarget "PointSDK-MinimalUITests-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1741EFF2354379800F7E78E /* Debug */,
+				E1741F002354379800F7E78E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1741F0C235437AE00F7E78E /* Build configuration list for PBXNativeTarget "PointSDK-MinimalUITests-Objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1741F0D235437AE00F7E78E /* Debug */,
+				E1741F0E235437AE00F7E78E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
