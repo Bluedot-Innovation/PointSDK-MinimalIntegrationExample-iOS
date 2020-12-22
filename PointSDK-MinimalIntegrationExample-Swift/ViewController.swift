@@ -12,38 +12,114 @@ import BDPointSDK
 import UserNotifications
 
 class ViewController: UIViewController {
-    //Add API key for the App
-    var apiKey = ""
+    // Add valid Project Id for the App
+    var projectId = "YourProjectId"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //MARK: Authenticate
-        
-        //Determine the authetication state
-        switch BDLocationManager.instance()!.authenticationState {
-        case .notAuthenticated:
-            BDLocationManager.instance()?.authenticate(withApiKey: apiKey, requestAuthorization: BDAuthorizationLevel.authorizedAlways)
-        default:
-            break
+    // Add valid Tempo Destination Id
+    var tempoDestinationId = "YourTempoDestinationId"
+    
+    @IBAction func initializeSDKButtonTouchUpInside(_ sender: Any) {
+        //MARK: Initialize with Point SDK
+        if BDLocationManager.instance()?.isInitialized() == false {
+            BDLocationManager.instance()?.initialize(
+                withProjectId: projectId){ error in
+                guard error == nil else {
+                    print("Initialisation Error: \(String(describing: error?.localizedDescription))")
+                    self.showAlert(title: "Initialisation Error", message: error?.localizedDescription ?? "null")
+                    return
+                }
+                
+                print( "Initialised successfully with Point sdk" )
+            }
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: Reset SDK
+    @IBAction func resetButtonAction(_ sender: UIButton) {
+        if BDLocationManager.instance()?.isInitialized() == true {
+            BDLocationManager.instance()?.reset(){ error in
+                guard error == nil else {
+                    print("Reset Error \(String(describing: error?.localizedDescription)) ")
+                    self.showAlert(title: "Reset Error", message: error?.localizedDescription ?? "null")
+                    return
+                }
+                
+                print( "Point SDK Reset successfully" )
+            }
+        }
     }
     
-    //MARK:- Stop SDK
-    
-    @IBAction func stopSDKBtnActn(_ sender: UIButton) {
-        //Determine the authetication state
-        switch BDLocationManager.instance()!.authenticationState {
-        case .authenticated:
-            BDLocationManager.instance()?.logOut()
-            print("logged out from SDK")
-        default:
-            break
+    //MARK: Start GeoTriggering
+    @IBAction func startGeotriggeringTouchUpInside(_ sender: Any) {
+        BDLocationManager.instance()?.startGeoTriggering(){ error in
+            guard error == nil else {
+                print("Start Geotriggering Error:  \(String(describing: error?.localizedDescription))")
+                self.showAlert(title: "Start Geotriggering Error", message: error?.localizedDescription ?? "null")
+                return
+            }
+            
+            print( "Start Geotriggering successfully" )
         }
+    }
+    
+    //MARK: Stop GeoTriggering
+    @IBAction func stopGeotriggeringButtonTouchUpInside(_ sender: Any) {
+        BDLocationManager.instance()?.stopGeoTriggering(){ error in
+            guard error == nil else {
+                print("Stop Geotriggering Error \(String(describing: error?.localizedDescription))")
+                self.showAlert(title: "Stop Geotriggering Error", message: error?.localizedDescription ?? "null")
+                return
+            }
+            
+            print( "Stop Geotriggering successfully" )
+        }
+    }
+    
+    //MARK: Start Tempo
+    @IBAction func startTempoButtonTouchUpInside(_ sender: Any) {
+        BDLocationManager.instance()?.startTempoTracking(withDestinationId: tempoDestinationId){ error in
+            guard error == nil else {
+                print("Start Tempo Error: \(String(describing: error?.localizedDescription))")
+                self.showAlert(title: "Start Tempo Error", message: error?.localizedDescription ?? "null")
+                return
+            }
+            
+            print( "Start Tempo successfully" )
+        }
+    }
+    
+    //MARK: Stop Tempo
+    @IBAction func stopTempoButtonTouchUpInside(_ sender: Any) {
+        BDLocationManager.instance()?.stopTempoTracking(){ error in
+            guard error == nil else {
+                print("Stop Tempo Error \(String(describing: error?.localizedDescription))")
+                self.showAlert(title: "Stop Tempo Error", message: error?.localizedDescription ?? "null")
+                return
+            }
+            
+            print( "Stop Tempo successfully" )
+        }
+    }
+    
+    //MARK: Open Location settings on device
+    @IBAction func openDeviceSettingsButtonTouchUpInside(_ sender: Any) {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+        
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)")
+            })
+        }
+    }
+    
+    
+    private func showAlert(title: String,message: String) {
+        //MARK:- Show Alert
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        let alertController = UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }

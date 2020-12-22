@@ -1,42 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nIh-ij-Z3c">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="EQe-be-8io">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <navigationController id="nIh-ij-Z3c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vgU-n7-YoW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AWS-od-ZtJ" kind="relationship" relationship="rootViewController" id="02g-8b-HXs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEz-MA-hEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="65"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="S8O-g8-GPF">
+            <objects>
+                <viewController id="AWS-od-ZtJ" customClass="OnboardingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MbP-EK-Obd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ui2-Iw-VFU">
-                                <rect key="frame" x="145" y="50" width="84" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Stop SDK"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app uses location services to determine your location relative to geofences" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niO-tH-onI">
+                                <rect key="frame" x="35" y="340.5" width="310" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Location Access" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fu-k0-SVT">
+                                <rect key="frame" x="83" y="312" width="213" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.666666666666686" id="c9L-Xt-nmJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="B9T-oD-eiu">
+                                <rect key="frame" x="18" y="409" width="343" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="cu3-2x-Dpi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Allow"/>
                                 <connections>
-                                    <action selector="stopSDKBtnActn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cze-bg-Qzw"/>
+                                    <action selector="allowLocationAccessTouchUpInside:" destination="AWS-od-ZtJ" eventType="touchUpInside" id="eWB-PQ-I5U"/>
+                                    <segue destination="QOJ-Uv-CCt" kind="show" id="TNY-Vo-1xK"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="SCh-xV-eAh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Ui2-Iw-VFU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fAT-PO-EEn"/>
-                            <constraint firstItem="Ui2-Iw-VFU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="onA-Ho-lvz"/>
+                            <constraint firstItem="8Fu-k0-SVT" firstAttribute="leading" secondItem="SCh-xV-eAh" secondAttribute="leading" constant="83" id="1Fl-MF-Z14"/>
+                            <constraint firstItem="niO-tH-onI" firstAttribute="top" secondItem="8Fu-k0-SVT" secondAttribute="bottom" constant="8" id="2kj-Fm-lmT"/>
+                            <constraint firstItem="niO-tH-onI" firstAttribute="leading" secondItem="SCh-xV-eAh" secondAttribute="leading" constant="35" id="5gS-n8-S4k"/>
+                            <constraint firstItem="8Fu-k0-SVT" firstAttribute="centerX" secondItem="niO-tH-onI" secondAttribute="centerX" constant="-0.5" id="Ley-Bo-ggW"/>
+                            <constraint firstItem="B9T-oD-eiu" firstAttribute="leading" secondItem="MbP-EK-Obd" secondAttribute="leadingMargin" id="QDH-DU-sxH"/>
+                            <constraint firstItem="8Fu-k0-SVT" firstAttribute="top" secondItem="SCh-xV-eAh" secondAttribute="top" constant="268" id="SYe-w6-h9J"/>
+                            <constraint firstItem="B9T-oD-eiu" firstAttribute="top" secondItem="niO-tH-onI" secondAttribute="bottom" constant="16" id="WfN-sn-DRW"/>
+                            <constraint firstItem="niO-tH-onI" firstAttribute="centerX" secondItem="B9T-oD-eiu" secondAttribute="centerX" constant="2.5" id="hy0-cG-UOd"/>
+                            <constraint firstItem="B9T-oD-eiu" firstAttribute="trailing" secondItem="MbP-EK-Obd" secondAttribute="trailingMargin" id="xXg-8E-OpF"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="u5U-gb-gL7"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2o-wC-t68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-148" y="63"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mpf-GM-ofA">
+            <objects>
+                <viewController id="QOJ-Uv-CCt" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ie2-6T-VsA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OW8-eG-QjG">
+                                <rect key="frame" x="29" y="106" width="114" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Initialize SDK"/>
+                                <connections>
+                                    <action selector="initializeSDkTouchUpInside" destination="QOJ-Uv-CCt" eventType="touchUpInside" id="ZT2-8W-RMI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAP-ub-ruq">
+                                <rect key="frame" x="29" y="150" width="94" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset SDK"/>
+                                <connections>
+                                    <action selector="resetSDkTouchUpInside" destination="QOJ-Uv-CCt" eventType="touchUpInside" id="72Z-33-rG5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uf-lC-gwy">
+                                <rect key="frame" x="27" y="247" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start GeoTriggering"/>
+                                <connections>
+                                    <action selector="startGeotriggeringTouchUpInside" destination="QOJ-Uv-CCt" eventType="touchUpInside" id="FeW-2o-8ky"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4x-0O-lZX">
+                                <rect key="frame" x="29" y="404" width="108" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Tempo"/>
+                                <connections>
+                                    <action selector="startTempoTouchUpInside" destination="QOJ-Uv-CCt" eventType="touchUpInside" id="iIo-Ta-3Q1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhR-Ht-TPY">
+                                <rect key="frame" x="85" y="585" width="205" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Open Location Settings"/>
+                                <connections>
+                                    <action selector="openLocationSettingsTouchUpInside" destination="QOJ-Uv-CCt" eventType="touchUpInside" id="EuI-Fw-iYZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpc-0y-fDC">
+                                <rect key="frame" x="29" y="301" width="178" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stop GeoTriggering"/>
+                                <connections>
+                                    <action selector="stopGeotriggeringTouchUpInside" destination="QOJ-Uv-CCt" eventType="touchUpInside" id="YyF-9d-Zis"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLv-SH-Hti">
+                                <rect key="frame" x="29" y="460" width="106" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stop Tempo"/>
+                                <connections>
+                                    <action selector="stopTempoTouchUpInside" destination="QOJ-Uv-CCt" eventType="touchUpInside" id="cu0-HD-WEs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qrg-jh-3L0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8uf-lC-gwy" firstAttribute="centerX" secondItem="Xpc-0y-fDC" secondAttribute="centerX" id="32m-2D-UDo"/>
+                            <constraint firstItem="Qrg-jh-3L0" firstAttribute="bottom" secondItem="dhR-Ht-TPY" secondAttribute="bottom" constant="46" id="7fh-jE-8zY"/>
+                            <constraint firstItem="Xpc-0y-fDC" firstAttribute="top" secondItem="8uf-lC-gwy" secondAttribute="bottom" constant="19" id="B72-6C-4Ih"/>
+                            <constraint firstItem="OW8-eG-QjG" firstAttribute="leading" secondItem="HAP-ub-ruq" secondAttribute="leading" id="Fyh-9R-6iH"/>
+                            <constraint firstItem="OW8-eG-QjG" firstAttribute="leading" secondItem="Qrg-jh-3L0" secondAttribute="leading" constant="29" id="Kux-5v-ZbE"/>
+                            <constraint firstItem="8uf-lC-gwy" firstAttribute="leading" secondItem="a4x-0O-lZX" secondAttribute="leading" constant="-9" id="MZJ-g3-Sf6"/>
+                            <constraint firstItem="HAP-ub-ruq" firstAttribute="leading" secondItem="8uf-lC-gwy" secondAttribute="leading" constant="9" id="OFu-BR-MQa"/>
+                            <constraint firstItem="a4x-0O-lZX" firstAttribute="top" secondItem="Xpc-0y-fDC" secondAttribute="bottom" constant="106" id="PCU-C6-n75"/>
+                            <constraint firstItem="lLv-SH-Hti" firstAttribute="top" secondItem="a4x-0O-lZX" secondAttribute="bottom" constant="20" id="abM-Eb-8vP"/>
+                            <constraint firstItem="a4x-0O-lZX" firstAttribute="leading" secondItem="lLv-SH-Hti" secondAttribute="leading" id="fcX-el-mJ7"/>
+                            <constraint firstItem="8uf-lC-gwy" firstAttribute="top" secondItem="HAP-ub-ruq" secondAttribute="bottom" constant="71" id="gqA-i7-99b"/>
+                            <constraint firstItem="OW8-eG-QjG" firstAttribute="top" secondItem="Qrg-jh-3L0" secondAttribute="top" constant="62" id="l4g-12-BFz"/>
+                            <constraint firstItem="HAP-ub-ruq" firstAttribute="top" secondItem="OW8-eG-QjG" secondAttribute="bottom" constant="8" id="rMT-dp-Qct"/>
+                            <constraint firstItem="8uf-lC-gwy" firstAttribute="trailing" secondItem="Xpc-0y-fDC" secondAttribute="trailing" constant="1" id="tJG-er-VvG"/>
+                            <constraint firstItem="dhR-Ht-TPY" firstAttribute="centerX" secondItem="ie2-6T-VsA" secondAttribute="centerX" id="xP6-hJ-W7c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sbw-Qh-Jfa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8g-ol-bAU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="62.518740629685162"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
