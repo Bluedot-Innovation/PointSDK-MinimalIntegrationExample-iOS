@@ -1,42 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YYf-we-8vh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PointSDK_MinimalIntegrationExample_iOS_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PointSDK_Swift_Minimal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qry-tp-bOL">
-                                <rect key="frame" x="145" y="50" width="84" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqX-ba-6l9">
+                                <rect key="frame" x="47" y="150" width="114" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Stop SDK"/>
+                                <state key="normal" title="Initialize SDK"/>
                                 <connections>
-                                    <action selector="stopSDKBtnActn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2D-D7-Ac1"/>
+                                    <action selector="initializeSDKButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cqw-bR-WYW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxm-Kv-QTK">
+                                <rect key="frame" x="49" y="203" width="94" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset SDK"/>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tiQ-0i-AHr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="HhP-aI-m88" userLabel="Open Settings">
+                                <rect key="frame" x="20" y="794" width="374" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Open Location Settings"/>
+                                <connections>
+                                    <action selector="openDeviceSettingsButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Qm-SW-RTu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRe-hY-RCD">
+                                <rect key="frame" x="49" y="452" width="108" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Tempo"/>
+                                <connections>
+                                    <action selector="startTempoButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UHe-gC-thl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmI-3p-bET">
+                                <rect key="frame" x="49" y="505" width="106" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stop Tempo"/>
+                                <connections>
+                                    <action selector="stopTempoButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h97-Gp-oh6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQW-Ck-mKi">
+                                <rect key="frame" x="49" y="308" width="171" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start GeoTriggering"/>
+                                <connections>
+                                    <action selector="startGeotriggeringTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLA-yZ-8nK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oe-iA-Hg5">
+                                <rect key="frame" x="49" y="354" width="169" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Stop GeoTriggering"/>
+                                <connections>
+                                    <action selector="stopGeotriggeringButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="56I-M1-aQC"/>
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Qry-tp-bOL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8DA-vl-2os"/>
-                            <constraint firstItem="Qry-tp-bOL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="sbt-N3-1QG"/>
+                            <constraint firstItem="VqX-ba-6l9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="1JM-md-NoG"/>
+                            <constraint firstItem="VqX-ba-6l9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="1ct-3z-ERp"/>
+                            <constraint firstItem="PmI-3p-bET" firstAttribute="top" secondItem="YRe-hY-RCD" secondAttribute="bottom" constant="17" id="6k9-7E-Gkz"/>
+                            <constraint firstItem="HhP-aI-m88" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="C0u-wR-rH8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HhP-aI-m88" secondAttribute="bottom" constant="35" id="CPR-mw-fPv"/>
+                            <constraint firstItem="mQW-Ck-mKi" firstAttribute="leading" secondItem="7oe-iA-Hg5" secondAttribute="leading" id="Chx-to-KhH"/>
+                            <constraint firstItem="YRe-hY-RCD" firstAttribute="top" secondItem="7oe-iA-Hg5" secondAttribute="bottom" constant="62" id="DVA-8R-3pD"/>
+                            <constraint firstItem="7oe-iA-Hg5" firstAttribute="top" secondItem="mQW-Ck-mKi" secondAttribute="bottom" constant="10" id="VRk-WZ-6yA"/>
+                            <constraint firstItem="YRe-hY-RCD" firstAttribute="leading" secondItem="PmI-3p-bET" secondAttribute="leading" id="YyL-ah-ThR"/>
+                            <constraint firstItem="Wxm-Kv-QTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="49" id="irg-FU-15d"/>
+                            <constraint firstItem="HhP-aI-m88" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mxN-Ce-tDE"/>
+                            <constraint firstItem="Wxm-Kv-QTK" firstAttribute="leading" secondItem="mQW-Ck-mKi" secondAttribute="leading" id="nts-Gl-C6r"/>
+                            <constraint firstItem="Wxm-Kv-QTK" firstAttribute="top" secondItem="VqX-ba-6l9" secondAttribute="bottom" constant="17" id="vJ1-UG-19F"/>
+                            <constraint firstItem="7oe-iA-Hg5" firstAttribute="leading" secondItem="YRe-hY-RCD" secondAttribute="leading" id="wXa-U2-sNw"/>
+                            <constraint firstItem="mQW-Ck-mKi" firstAttribute="top" secondItem="Wxm-Kv-QTK" secondAttribute="bottom" constant="69" id="zI7-8q-Ygu"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="i9p-oh-Spv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="358" y="-35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wv4-aS-wdd">
+            <objects>
+                <navigationController id="YYf-we-8vh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kVi-9z-A6D">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qgj-H1-G0L" kind="relationship" relationship="rootViewController" id="Tpb-ul-Ygv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVq-yd-K73" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1143" y="-34"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="r1S-h6-fcf">
+            <objects>
+                <viewController id="qgj-H1-G0L" customClass="OnboardingViewController" customModule="PointSDK_Swift_Minimal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rbe-R6-Eef">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="h1l-2E-UiQ">
+                                <rect key="frame" x="20" y="441.5" width="374" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Kjf-rI-2hQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Allow"/>
+                                <connections>
+                                    <action selector="allowLocationAccess:" destination="qgj-H1-G0L" eventType="touchUpInside" id="FNK-4H-hVJ"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="SlV-hD-fwH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app uses location services to determine your location relative to geofences" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xam-5z-JbC">
+                                <rect key="frame" x="35" y="384.5" width="349" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Location Access" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WD-Jz-B9D">
+                                <rect key="frame" x="83" y="356" width="252" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.666666666666686" id="Gok-rE-Qts"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fYu-wo-zpw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5WD-Jz-B9D" firstAttribute="top" secondItem="fYu-wo-zpw" secondAttribute="top" constant="268" id="ElE-yM-btX"/>
+                            <constraint firstItem="5WD-Jz-B9D" firstAttribute="leading" secondItem="fYu-wo-zpw" secondAttribute="leading" constant="83" id="IGg-fB-KZN"/>
+                            <constraint firstItem="xam-5z-JbC" firstAttribute="leading" secondItem="fYu-wo-zpw" secondAttribute="leading" constant="35" id="LFA-ia-wcX"/>
+                            <constraint firstItem="xam-5z-JbC" firstAttribute="top" secondItem="5WD-Jz-B9D" secondAttribute="bottom" constant="8" id="OWJ-cp-ofH"/>
+                            <constraint firstItem="5WD-Jz-B9D" firstAttribute="centerX" secondItem="xam-5z-JbC" secondAttribute="centerX" constant="-0.5" id="PaP-Aa-OmJ"/>
+                            <constraint firstItem="xam-5z-JbC" firstAttribute="centerX" secondItem="h1l-2E-UiQ" secondAttribute="centerX" constant="2.5" id="YFQ-3S-Hn4"/>
+                            <constraint firstItem="h1l-2E-UiQ" firstAttribute="leading" secondItem="Rbe-R6-Eef" secondAttribute="leadingMargin" id="gai-Xz-yLy"/>
+                            <constraint firstItem="h1l-2E-UiQ" firstAttribute="trailing" secondItem="Rbe-R6-Eef" secondAttribute="trailingMargin" id="jvN-EZ-yj4"/>
+                            <constraint firstItem="h1l-2E-UiQ" firstAttribute="top" secondItem="xam-5z-JbC" secondAttribute="bottom" constant="16" id="kHR-Vh-8ya"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uw8-Xk-8nM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iB5-dN-hBW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-364.48598130841117" y="-36.285097192224626"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

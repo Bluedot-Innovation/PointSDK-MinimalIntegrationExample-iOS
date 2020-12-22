@@ -19,19 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var authorizationStatus: CLAuthorizationStatus = .notDetermined
-    var centralManager: CBCentralManager?
-    var isBluetoothEnabled = false
     
     let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
     
-    lazy var userInterventionForBluetoothDialog: UIAlertController = {
-        let title = "Bluetooth Required"
-        let message = "There are nearby Beacons which cannot be detected because Bluetooth is disabled. Re-enable Bluetooth to restore full functionality."
-        
-        return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
-    }()
-    
-    lazy var userInterventionForLocationServicesNeverDialog: UIAlertController = {
+    lazy var locationServicesNeverDialog: UIAlertController = {
         let appName = Bundle.main.object( forInfoDictionaryKey: "CFBundleDisplayName" )
         let title = "Location Services Required"
         let message = "This App requires Location Services which are currently set to \(authorizationStatus == .authorizedWhenInUse ? "while in using" : "disabled").  To restore Location Services, go to :\nSettings → Privacy →\nLocation Settings →\n\(String(describing: appName)) ✓"
@@ -39,14 +30,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
     }()
     
-    lazy var userInterventionForLocationServicesWhileInUseDialog: UIAlertController = {
+    lazy var locationServicesWhileInUseDialog: UIAlertController = {
         let title = "Location Services set to 'While in Use'"
         let message = "You can ask for further location permission from user via this delegate method"
         
         return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
     }()
     
-    lazy var userInterventionForPowerModeDialog: UIAlertController = {
+    lazy var accuracyAuthorizationReducedDialog: UIAlertController = {
+        let appName = Bundle.main.object( forInfoDictionaryKey: "CFBundleDisplayName" )
+        let title = "Accuracy Authorization set to Reduced Accuracy"
+        let message = "This App requires Location Services which are currently set to Reduced Accuracy.  To restore Location Services, go to :\nSettings → Privacy →\nLocation Settings →\n\(String(describing: appName)) ✓"
+        
+        return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
+    }()
+    
+    lazy var lowPowerModeDialog: UIAlertController = {
         let title   = "Low Power Mode"
         let message = "Low Power Mode has been enabled on this device.  To restore full location precision, disable the setting at :\nSettings → Battery → Low Power Mode"
         
@@ -56,11 +55,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        BDLocationManager.instance()?.sessionDelegate = self
-        BDLocationManager.instance()?.locationDelegate = self
-        centralManager = CBCentralManager(delegate: self,
-                                          queue: nil,
-                                          options: [CBCentralManagerOptionShowPowerAlertKey: NSNumber(booleanLiteral: false)])
+        BDLocationManager.instance()?.bluedotServiceDelegate = self
+        BDLocationManager.instance()?.geoTriggeringEventDelegate = self
+        BDLocationManager.instance()?.tempoTrackingDelegate = self
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
             if !accepted {

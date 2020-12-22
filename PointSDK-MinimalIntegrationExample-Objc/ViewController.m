@@ -15,48 +15,121 @@
 
 @implementation ViewController
 
-//Add API key for the App
-NSString  *apiKey = @"";
+// Use a project Id acquired from the Canvas UI.
+NSString *projectId = @"YourProjectId";
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    //Do any additional setup after loading the view, typically from a nib.
-    
-    //Determine the authentication state
-    switch( BDLocationManager.instance.authenticationState )
+// Use a Tempo Destination Id from the Canvas UI.
+NSString * tempoDestinationId = @"YourTempoDestinationId";
+
+
+- (IBAction)initializeSDkTouchUpInside {
+    //MARK: Initialize with Point SDK
+    if([BDLocationManager.instance isInitialized] == NO)
     {
-        case BDAuthenticationStateNotAuthenticated:
-        {
-            [BDLocationManager.instance authenticateWithApiKey: apiKey
-                                          requestAuthorization: authorizedAlways];
+        [BDLocationManager.instance initializeWithProjectId:projectId completion:^(NSError * _Nullable error) {
+            if(error != nil){
+                NSLog(@"Initialisation Error: %@", error.localizedDescription);
+                [self showAlertWithTitle:@"Initialisation Error" message:error.localizedDescription];
+                return;
+            }
             
-            break;
+            NSLog(@"Initialised successfully with Point sdk");
+        }];
+
+    }
+}
+
+- (IBAction)resetSDkTouchUpInside {
+    if([BDLocationManager.instance isInitialized] == YES)
+    {
+        [BDLocationManager.instance resetWithCompletion:^(NSError * _Nullable error) {
+            if(error != nil){
+                NSLog(@"Reset Error: %@", error.localizedDescription);
+                [self showAlertWithTitle:@"Reset Error" message:error.localizedDescription];
+                return;
+            }
+            
+            NSLog(@"Point SDK Reset successfully");
+        }];
+
+    }
+}
+
+- (IBAction)startGeotriggeringTouchUpInside {
+    [BDLocationManager.instance startGeoTriggeringWithCompletion:^(NSError * _Nullable error) {
+        if(error != nil) {
+            NSLog(@"Start Geotriggering Error: %@", error.localizedDescription);
+            [self showAlertWithTitle:@"Start Geotriggering Error" message:error.localizedDescription];
+            return;
         }
-            
-        default:
-            break;
-    }
+        
+        NSLog(@"Start Geotriggering successfully");
+    }];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    //Dispose of any resources that can be recreated.
+- (IBAction)stopGeotriggeringTouchUpInside {
+    [BDLocationManager.instance stopGeoTriggeringWithCompletion:^(NSError * _Nullable error) {
+        if(error != nil) {
+            NSLog(@"Stop Geotriggering Error: %@", error.localizedDescription);
+            [self showAlertWithTitle:@"Stop Geotriggering Error" message:error.localizedDescription];
+            return;
+        }
+        
+        NSLog(@"Stop Geotriggering successfully");
+    }];
 }
 
-//MARK:- Stop SDK
-- (IBAction)stopSDKBtnActn:(id)sender {
+- (IBAction)startTempoTouchUpInside {
+    [BDLocationManager.instance startTempoTrackingWithDestinationId:tempoDestinationId completion:^(NSError * _Nullable error) {
+        if(error != nil) {
+            NSLog(@"Start Tempo Error: %@", error.localizedDescription);
+            [self showAlertWithTitle:@"Start Tempo Error" message:error.localizedDescription];
+            return;
+        }
+        
+        NSLog(@"Start Tempo successfully");
+    }];
+}
+
+- (IBAction)stopTempoTouchUpInside {
+    [BDLocationManager.instance stopTempoTrackingWithCompletion:^(NSError * _Nullable error) {
+        if(error != nil) {
+            NSLog(@"Stop Tempo Error: %@", error.localizedDescription);
+            [self showAlertWithTitle:@"Stop Tempo Error" message:error.localizedDescription];
+            return;
+        }
+        
+        NSLog(@"Stop Tempo successfully");
+    }];
+}
+
+- (IBAction)openLocationSettingsTouchUpInside {
     
-    //Determine the authentication state
-    switch( BDLocationManager.instance.authenticationState )
-    {
-        case BDAuthenticationStateAuthenticated:
-            [BDLocationManager.instance logOut];
-            break;
-            
-        default:
-            break;
+    NSURL * settingsUrl = [[NSURL alloc] initWithString: UIApplicationOpenSettingsURLString];
+    
+    if(settingsUrl == nil) {
+        return;
     }
+    
+    if([UIApplication.sharedApplication canOpenURL:settingsUrl])
+    {
+        [UIApplication.sharedApplication openURL:settingsUrl options:@{} completionHandler:^(BOOL success) {
+            NSLog(@"Settings Opened: %@", success ? @"Yes" : @"No");
+        }];
+    }
+}
+
+- (void)showAlertWithTitle: (NSString *)title message: (NSString *)message
+{
+    UIAlertController *alertController = [ UIAlertController alertControllerWithTitle: title
+                         message: message
+                  preferredStyle: UIAlertControllerStyleAlert ];
+            
+    UIAlertAction *OK = [ UIAlertAction actionWithTitle: @"OK" style: UIAlertActionStyleCancel handler: nil ];
+            
+    [ alertController addAction:OK ];
+            
+    [self presentViewController: alertController animated: YES completion: nil];
 }
 
 @end
