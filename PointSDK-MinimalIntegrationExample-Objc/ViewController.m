@@ -15,10 +15,10 @@
 
 @implementation ViewController
 
-// Add valid Project Id for the App
+// Use a project Id acquired from the Canvas UI.
 NSString *projectId = @"YourProjectId";
 
-// Add valid Tempo Destination Id
+// Use a Tempo Destination Id from the Canvas UI.
 NSString * tempoDestinationId = @"YourTempoDestinationId";
 
 

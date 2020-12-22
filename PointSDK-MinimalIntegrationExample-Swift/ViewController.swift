@@ -12,10 +12,10 @@ import BDPointSDK
 import UserNotifications
 
 class ViewController: UIViewController {
-    // Add valid Project Id for the App
+    // Use a project Id acquired from the Canvas UI.
     var projectId = "YourProjectId"
     
-    // Add valid Tempo Destination Id
+    // Use a Tempo Destination Id from the Canvas UI.
     var tempoDestinationId = "YourTempoDestinationId"
     
     @IBAction func initializeSDKButtonTouchUpInside(_ sender: Any) {
