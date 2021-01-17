@@ -19,7 +19,7 @@ class OnboardingViewController: UIViewController {
     }
     
     @IBAction func allowLocationAccess(_ sender: Any) {
-        BDLocationManager.instance()?.requestAlwaysAuthorization()
+        BDLocationManager.instance()?.requestWhenInUseAuthorization()
     }
     
 }
