@@ -34,6 +34,7 @@ NSString * tempoDestinationId = @"YourTempoDestinationId";
             }
             
             NSLog(@"Initialised successfully with Point sdk");
+            [BDLocationManager.instance requestAlwaysAuthorization];
         }];
 
     }

@@ -30,6 +30,7 @@ class ViewController: UIViewController {
                 }
                 
                 print( "Initialised successfully with Point sdk" )
+                BDLocationManager.instance()?.requestAlwaysAuthorization()
             }
         }
     }

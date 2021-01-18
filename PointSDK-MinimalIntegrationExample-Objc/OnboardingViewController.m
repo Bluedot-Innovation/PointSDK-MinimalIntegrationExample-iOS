@@ -16,7 +16,7 @@
 @implementation OnboardingViewController
 
 - (IBAction)allowLocationAccessTouchUpInside:(id)sender {
-    [BDLocationManager.instance requestAlwaysAuthorization];
+    [BDLocationManager.instance requestWhenInUseAuthorization];
 }
 
 
