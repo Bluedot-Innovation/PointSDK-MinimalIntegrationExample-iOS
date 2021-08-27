@@ -52,17 +52,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
     }()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    private func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) async -> Bool {
         // Override point for customization after application launch.
         
         BDLocationManager.instance()?.bluedotServiceDelegate = self
         BDLocationManager.instance()?.geoTriggeringEventDelegate = self
         BDLocationManager.instance()?.tempoTrackingDelegate = self
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+        do {
+            let accepted = try await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound])
             if !accepted {
                 print("Notification access denied.")
             }
+        } catch {
+            print(error.localizedDescription)
         }
         
         return true
@@ -90,19 +93,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func showAlert(title: String,message: String){
+    func showAlert(title: String,message: String) async {
         //MARK:- Show Alert
         let applicationState = UIApplication.shared.applicationState
         
-        switch applicationState
-        {
+        switch applicationState {
         case .active: // In the fore-ground, display notification directly to the user
             let alertController = UIAlertController(title: title, message: message, style: .alert, actions: dismissAction)
-
+            
             self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
             
         default:
-            
             let content = UNMutableNotificationContent()
             content.title = "BDPoint notification"
             content.body = message
@@ -111,10 +112,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let request = UNNotificationRequest(identifier: "BDPointNotification", content: content, trigger: nil)
             
             UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-            UNUserNotificationCenter.current().add(request) {(error) in
-                if let error = error {
-                    print("Notification error: \(error)")
-                }
+            
+            do {
+                try await UNUserNotificationCenter.current().add(request)
+            } catch {
+                print("Notification error: \(error)")
             }
         }
     }
