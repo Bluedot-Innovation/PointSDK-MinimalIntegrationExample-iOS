@@ -4,7 +4,7 @@ This project demonstrates the recommended integration approach for Bluedot Point
 
 ### Get started
 
-1. Run 'Pod Install' on a terminal.
+1. Run 'pod update' on a terminal.
 2. Open the PointSDK-MinimalIntegrationExample-iOS.xcworkspace in Xcode.
 3. Then, compile and run the project in either simulator or device.
 4. Paste your Project Id to ViewController in `Objc` or/and `Swift` project.
