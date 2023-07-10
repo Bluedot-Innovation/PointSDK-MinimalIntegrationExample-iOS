@@ -190,27 +190,39 @@
 }
 
 //MARK: checked into a zone
-- (void)didEnterZone:(BDZoneEntryEvent *)enterEvent
+- (void)didEnterZone:(nonnull GeoTriggerEvent *)event
 {
     _dateFormatter = [[NSDateFormatter alloc] init];
     [_dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-    NSString *formattedDate = [ _dateFormatter stringFromDate: enterEvent.location.timestamp ];
+    NSString *formattedDate = [ _dateFormatter stringFromDate: event.entryEvent.locations.firstObject.timestamp ];
     
-    NSString *message = [ NSString stringWithFormat: @"You have checked into fence '%@' in zone '%@', at %@",enterEvent.fence.name, enterEvent.zone.name, formattedDate ];
+    NSString *message = [ NSString stringWithFormat: @"You have checked into zone '%@' with %lu crossed fences, at %@", event.zoneInfo.name, event.entryEvent.crossedFences.count, formattedDate ];
+    
+    NSLog(@"%@", message);
+    
+    for (CrossedFence* crossedFence in event.entryEvent.crossedFences)
+    {
+        NSString *crossedDT = [ _dateFormatter stringFromDate: crossedFence.location.timestamp ];
+        NSLog(@"didEnterZone: crossed fence:'%@' at:%@", crossedFence.fenceName, crossedDT);
+    }
     
     [ self showAlert: message ];
-    
 }
 
 //MARK: Checked out from a zone
-- (void)didExitZone:(BDZoneExitEvent *)exitEvent
+- (void)didExitZone:(nonnull GeoTriggerEvent *)event
 {
-    NSString *message = [ NSString stringWithFormat: @"You left '%@' in zone '%@' after %lu minutes",exitEvent.fence.name, exitEvent.zone.name, (unsigned long)exitEvent.duration ];
+    NSString *message = [ NSString stringWithFormat: @"You left '%@' in zone '%@' after %lu minutes", event.exitEvent.fenceName, event.zoneInfo.name, (unsigned long)(event.exitEvent.dwellTime/1000/60) ];
     
     [ self showAlert: message ];
 }
 
-//MARK:- Conform to BDPTempoTrackingDelegate protocol - call-backs which Point SDK makes to inform the Application of Tempo related events
+- (void)tempoTrackingDidUpdate:(TempoTrackingUpdate *)tempoUpdate
+{
+    NSLog(@"tempoTrackingDidUpdate: %@ - eta: %lu", tempoUpdate.destination.name, tempoUpdate.eta);
+}
+
+//MARK:- Conform to BDPTempoTrackingDelegate protocol - call-backs which Point SDK makes to inform the Application of Tempo releated events
 - (void)tempoTrackingDidExpire
 {
     NSLog(@"tempoTrackingDidExpire");

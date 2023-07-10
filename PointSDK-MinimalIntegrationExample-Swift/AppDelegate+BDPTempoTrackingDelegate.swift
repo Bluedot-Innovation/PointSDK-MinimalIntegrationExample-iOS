@@ -11,6 +11,11 @@ import BDPointSDK
 
 extension AppDelegate: BDPTempoTrackingDelegate {
     
+    func tempoTrackingDidUpdate(_ tempoUpdate: TempoTrackingUpdate) {
+        
+        print("tempoTrackingDidUpdate: '\(tempoUpdate.destination?.name ?? "")' - eta:\(tempoUpdate.eta) minutes")
+    }
+    
     func didStopTrackingWithError(_ error: Error!) {
         print("didStopTrackingWithError: \(error.localizedDescription)")
     }
