@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -246,7 +246,6 @@
 				1EB01708A60DE0DE86C05D18 /* Pods-PointSDK-MinimalIntegrationExample-Swift.debug.xcconfig */,
 				1F77A7FF24616F3F8BC71201 /* Pods-PointSDK-MinimalIntegrationExample-Swift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -651,7 +650,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -678,7 +677,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -819,7 +818,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -847,7 +846,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

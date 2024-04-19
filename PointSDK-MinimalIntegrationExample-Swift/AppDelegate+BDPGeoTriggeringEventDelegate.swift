@@ -17,7 +17,7 @@ extension AppDelegate: BDPGeoTriggeringEventDelegate {
     }
     
     //MARK: Entered into a zone
-    func didEnterZone(_ enterEvent: BDZoneEntryEvent) {
+    func didEnterZone(_ event: GeoTriggerEvent) {
         print("You have checked into a zone")
         
         var formattedcheckInDate = ""
@@ -26,19 +26,19 @@ extension AppDelegate: BDPGeoTriggeringEventDelegate {
         dateFormatter.locale = NSLocale.current
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Specify your format that you want
         
-        formattedcheckInDate = dateFormatter.string(from: enterEvent.location.timestamp!)
+        formattedcheckInDate = dateFormatter.string(from: event.entryEvent?.locations.first?.timestamp ?? Date())
         
-        let message = "You have checked into fence '\((enterEvent.fence.name!))' in zone '\((enterEvent.zone().name!))', at \(formattedcheckInDate)"
+        let message = "You have checked into fence '\(event.entryEvent?.fenceName ?? "")' in zone '\(event.zoneInfo.name)', at \(formattedcheckInDate)"
         
         showAlert(title: "Application notification", message: message)
 
     }
     
     //MARK: Exit a Zone
-    func didExitZone(_ exitEvent: BDZoneExitEvent) {
+    func didExitZone(_ event: GeoTriggerEvent) {
         print("checked out from a zone")
         
-        let message = "You have left fence '\(exitEvent.fence.name!)' in zone '\(exitEvent.zone().name!)', after \(exitEvent.duration) minutes"
+        let message = "You have left fence '\(event.exitEvent?.fenceName ?? "")' in zone '\(event.zoneInfo.name)', after \(event.exitEvent!.dwellTime/1000/60) minutes"
         showAlert(title: "Application notification", message: message)
 
     }
