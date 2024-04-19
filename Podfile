@@ -6,7 +6,7 @@ target 'PointSDK-MinimalIntegrationExample-Objc' do
   use_frameworks!
 
   # Pods for PointSDK-MinimalIntegrationExample-Objc
-  pod 'BluedotPointSDK', '16.0.0-rc13'
+  pod 'BluedotPointSDK', '16.0.0'
 
 end
 
@@ -14,6 +14,6 @@ target 'PointSDK-MinimalIntegrationExample-Swift' do
   use_frameworks!
 
   # Pods for PointSDK-MinimalIntegrationExample-Swift
-  pod 'BluedotPointSDK', '16.0.0-rc13'
+  pod 'BluedotPointSDK', '16.0.0'
 
 end
