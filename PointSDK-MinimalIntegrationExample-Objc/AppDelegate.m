@@ -184,9 +184,8 @@
 //MARK:- Conform to BDPGeoTriggeringDelegate protocol - call-backs which Point SDK makes to inform the Application of zone updates / checkin / checkout related events
 
 //MARK: This method is passed the Zone information utilised by the Bluedot SDK.
-- (void)onZoneInfoUpdate:(NSSet<BDZoneInfo *> *)zoneInfos
-{
-    NSLog( @"Point sdk updated with %lu zones", (unsigned long)zoneInfos.count );
+- (void)didUpdateZoneInfo {
+    NSLog(@"Zone information is updated");
 }
 
 //MARK: checked into a zone
