@@ -11,9 +11,9 @@ import BDPointSDK
 
 extension AppDelegate: BDPGeoTriggeringEventDelegate {
     
-    //MARK: This method is passed the Zone information utilised by the Bluedot SDK.
-    func onZoneInfoUpdate(_ zoneInfos: Set<BDZoneInfo>) {
-        print("zone information is received")
+    //MARK: Called whenever new BDZoneInfo is received from Canvas
+    func didUpdateZoneInfo() {
+        print("Zone information is updated")
     }
     
     //MARK: Entered into a zone
