@@ -823,7 +823,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minIntegrationAppSwift;
 				PRODUCT_NAME = "PointSDK Swift Minimal";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -851,7 +851,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppSwift;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minIntegrationAppSwift;
 				PRODUCT_NAME = "PointSDK Swift Minimal";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
