@@ -655,7 +655,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppObjc;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minIntegrationAppObjc;
 				PRODUCT_NAME = "PointSDK Objc Minimal";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -682,7 +682,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minimalIntegrationAppObjc;
+				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minIntegrationAppObjc;
 				PRODUCT_NAME = "PointSDK Objc Minimal";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
