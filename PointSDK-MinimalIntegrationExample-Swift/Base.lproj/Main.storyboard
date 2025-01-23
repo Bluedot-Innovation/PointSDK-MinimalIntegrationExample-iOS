@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YYf-we-8vh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YYf-we-8vh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VqX-ba-6l9">
-                                <rect key="frame" x="47" y="150" width="114" height="36"/>
+                                <rect key="frame" x="47" y="154" width="114" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Initialize SDK"/>
                                 <connections>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wxm-Kv-QTK">
-                                <rect key="frame" x="49" y="203" width="94" height="36"/>
+                                <rect key="frame" x="49" y="207" width="94" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reset SDK"/>
                                 <connections>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YRe-hY-RCD">
-                                <rect key="frame" x="49" y="452" width="108" height="36"/>
+                                <rect key="frame" x="49" y="456" width="108" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start Tempo"/>
                                 <connections>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmI-3p-bET">
-                                <rect key="frame" x="49" y="505" width="106" height="36"/>
+                                <rect key="frame" x="49" y="509" width="106" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Stop Tempo"/>
                                 <connections>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQW-Ck-mKi">
-                                <rect key="frame" x="49" y="308" width="171" height="36"/>
+                                <rect key="frame" x="49" y="312" width="170" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start GeoTriggering"/>
                                 <connections>
@@ -66,11 +66,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oe-iA-Hg5">
-                                <rect key="frame" x="49" y="354" width="169" height="36"/>
+                                <rect key="frame" x="49" y="358" width="169" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Stop GeoTriggering"/>
                                 <connections>
                                     <action selector="stopGeotriggeringButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="56I-M1-aQC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-d0-TZS">
+                                <rect key="frame" x="49" y="628" width="65" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Chat AI"/>
+                                <connections>
+                                    <action selector="openChatAIButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kma-e9-C5K"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -105,7 +114,7 @@
             <objects>
                 <navigationController id="YYf-we-8vh" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kVi-9z-A6D">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -125,7 +134,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="h1l-2E-UiQ">
-                                <rect key="frame" x="20" y="441.5" width="374" height="33"/>
+                                <rect key="frame" x="20" y="445.5" width="374" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="Kjf-rI-2hQ"/>
                                 </constraints>
@@ -137,13 +146,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app uses location services to determine your location relative to geofences" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xam-5z-JbC">
-                                <rect key="frame" x="35" y="384.5" width="349" height="41"/>
+                                <rect key="frame" x="35" y="388.5" width="349" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow Location Access" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WD-Jz-B9D">
-                                <rect key="frame" x="83" y="356" width="252" height="20.5"/>
+                                <rect key="frame" x="83" y="360" width="252" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.666666666666686" id="Gok-rE-Qts"/>
                                 </constraints>
