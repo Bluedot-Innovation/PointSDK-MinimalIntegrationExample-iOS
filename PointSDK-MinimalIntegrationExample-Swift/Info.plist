@@ -20,8 +20,6 @@
 	<string>3</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>Allow the access to Bluetooth for Beacon detection</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We need access to location in background to be able to trigger notifications when you arrive at a location. Your location is used to trigger the geofences that you added on the Bluedot UI.
 </string>
@@ -58,7 +56,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Allow the access to Bluetooth for Beacon detection</string>
 </dict>
 </plist>
