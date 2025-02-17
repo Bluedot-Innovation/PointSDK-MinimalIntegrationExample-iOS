@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -38,6 +38,7 @@
 		7859007E257DF77800162C94 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7859007D257DF77800162C94 /* OnboardingViewController.m */; };
 		78590083257DF9D400162C94 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78590082257DF9D400162C94 /* OnboardingViewController.swift */; };
 		E11A3CBE21ABB19900AD5102 /* UIAlertController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */; };
+		E14C1C2D2D09434400FB8371 /* ChatAIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14C1C292D09434400FB8371 /* ChatAIViewController.swift */; };
 		E1741EFA2354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1741EF92354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift */; };
 		E1741F08235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1741F07235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +110,7 @@
 		78590082257DF9D400162C94 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D3D644B5B034D00ADF09B1FD /* Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig"; path = "Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig"; sourceTree = "<group>"; };
 		E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Actions.swift"; sourceTree = "<group>"; };
+		E14C1C292D09434400FB8371 /* ChatAIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatAIViewController.swift; sourceTree = "<group>"; };
 		E1741EF72354379800F7E78E /* PointSDK-MinimalUITests-Swift.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PointSDK-MinimalUITests-Swift.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1741EF92354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointSDK_MinimalUITests_Swift.swift; sourceTree = "<group>"; };
 		E1741EFB2354379800F7E78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +118,13 @@
 		E1741F07235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointSDK_MinimalUITests_Objc.swift; sourceTree = "<group>"; };
 		E1741F09235437AE00F7E78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E132A2882D2F5CAD00564004 /* Extensions */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extensions; sourceTree = "<group>"; };
+		E132A2892D2F5CC200564004 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
+		E132A28A2D2F5CDD00564004 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+		E132A28B2D2F5D2300564004 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3C02C47E207F1F79008CA191 /* Frameworks */ = {
@@ -219,6 +228,7 @@
 				E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */,
 				3C89FD6A207C799B002FC3D4 /* ViewController.swift */,
 				78590082257DF9D400162C94 /* OnboardingViewController.swift */,
+				E14C1C2B2D09434400FB8371 /* ChatAI */,
 			);
 			path = "PointSDK-MinimalIntegrationExample-Swift";
 			sourceTree = "<group>";
@@ -247,6 +257,18 @@
 				1F77A7FF24616F3F8BC71201 /* Pods-PointSDK-MinimalIntegrationExample-Swift.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E14C1C2B2D09434400FB8371 /* ChatAI */ = {
+			isa = PBXGroup;
+			children = (
+				E132A28B2D2F5D2300564004 /* ViewModels */,
+				E132A28A2D2F5CDD00564004 /* Models */,
+				E132A2892D2F5CC200564004 /* Views */,
+				E132A2882D2F5CAD00564004 /* Extensions */,
+				E14C1C292D09434400FB8371 /* ChatAIViewController.swift */,
+			);
+			path = ChatAI;
 			sourceTree = "<group>";
 		};
 		E1741EF82354379800F7E78E /* PointSDK-MinimalUITests-Swift */ = {
@@ -305,6 +327,12 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E132A2882D2F5CAD00564004 /* Extensions */,
+				E132A2892D2F5CC200564004 /* Views */,
+				E132A28A2D2F5CDD00564004 /* Models */,
+				E132A28B2D2F5D2300564004 /* ViewModels */,
 			);
 			name = "PointSDK-MinimalIntegrationExample-Swift";
 			productName = "PointSDK-MinimalIntegrationExample-iOS-Swift";
@@ -561,6 +589,7 @@
 				3C89FD6B207C799B002FC3D4 /* ViewController.swift in Sources */,
 				7859006D257DF5BE00162C94 /* AppDelegate+BDPBluedotServiceDelegate.swift in Sources */,
 				78590071257DF5BE00162C94 /* AppDelegate+BDPGeoTriggeringEventDelegate.swift in Sources */,
+				E14C1C2D2D09434400FB8371 /* ChatAIViewController.swift in Sources */,
 				3C89FD69207C799B002FC3D4 /* AppDelegate.swift in Sources */,
 				78590083257DF9D400162C94 /* OnboardingViewController.swift in Sources */,
 				78590073257DF5BE00162C94 /* AppDelegate+BDPTempoTrackingDelegate.swift in Sources */,
@@ -650,7 +679,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -677,7 +706,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -726,6 +755,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -786,6 +816,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -818,7 +849,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -826,6 +857,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minIntegrationAppSwift;
 				PRODUCT_NAME = "PointSDK Swift Minimal";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -846,7 +881,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -854,6 +889,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = au.com.bluedot.minIntegrationAppSwift;
 				PRODUCT_NAME = "PointSDK Swift Minimal";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -865,7 +904,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				INFOPLIST_FILE = "PointSDK-MinimalUITests-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -887,7 +926,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				INFOPLIST_FILE = "PointSDK-MinimalUITests-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -908,7 +947,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				INFOPLIST_FILE = "PointSDK-MinimalUITests-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -930,7 +969,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				INFOPLIST_FILE = "PointSDK-MinimalUITests-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
