@@ -38,6 +38,14 @@
 		7859007E257DF77800162C94 /* OnboardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7859007D257DF77800162C94 /* OnboardingViewController.m */; };
 		78590083257DF9D400162C94 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78590082257DF9D400162C94 /* OnboardingViewController.swift */; };
 		E11A3CBE21ABB19900AD5102 /* UIAlertController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */; };
+		E1287E242D63F68D00C03DBB /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1287E172D63F68D00C03DBB /* Color+Extension.swift */; };
+		E1287E252D63F68D00C03DBB /* ChatAIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1287E222D63F68D00C03DBB /* ChatAIViewController.swift */; };
+		E1287E262D63F68D00C03DBB /* ChatAIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1287E1C2D63F68D00C03DBB /* ChatAIViewModel.swift */; };
+		E1287E272D63F68D00C03DBB /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1287E1F2D63F68D00C03DBB /* ChatBubbleView.swift */; };
+		E1287E282D63F68D00C03DBB /* FeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1287E202D63F68D00C03DBB /* FeedbackView.swift */; };
+		E1287E292D63F68D00C03DBB /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1287E1A2D63F68D00C03DBB /* ChatMessage.swift */; };
+		E1287E2A2D63F68D00C03DBB /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1287E182D63F68D00C03DBB /* String+Extension.swift */; };
+		E1287E2B2D63F68D00C03DBB /* ChatAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1287E1E2D63F68D00C03DBB /* ChatAIView.swift */; };
 		E1741EFA2354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1741EF92354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift */; };
 		E1741F08235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1741F07235437AE00F7E78E /* PointSDK_MinimalUITests_Objc.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +117,14 @@
 		78590082257DF9D400162C94 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		D3D644B5B034D00ADF09B1FD /* Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig"; path = "Target Support Files/Pods-PointSDK-MinimalIntegrationExample-Objc/Pods-PointSDK-MinimalIntegrationExample-Objc.release.xcconfig"; sourceTree = "<group>"; };
 		E11A3CBD21ABB19900AD5102 /* UIAlertController+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Actions.swift"; sourceTree = "<group>"; };
+		E1287E172D63F68D00C03DBB /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		E1287E182D63F68D00C03DBB /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		E1287E1A2D63F68D00C03DBB /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		E1287E1C2D63F68D00C03DBB /* ChatAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAIViewModel.swift; sourceTree = "<group>"; };
+		E1287E1E2D63F68D00C03DBB /* ChatAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAIView.swift; sourceTree = "<group>"; };
+		E1287E1F2D63F68D00C03DBB /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
+		E1287E202D63F68D00C03DBB /* FeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackView.swift; sourceTree = "<group>"; };
+		E1287E222D63F68D00C03DBB /* ChatAIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAIViewController.swift; sourceTree = "<group>"; };
 		E1741EF72354379800F7E78E /* PointSDK-MinimalUITests-Swift.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PointSDK-MinimalUITests-Swift.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1741EF92354379800F7E78E /* PointSDK_MinimalUITests_Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointSDK_MinimalUITests_Swift.swift; sourceTree = "<group>"; };
 		E1741EFB2354379800F7E78E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +224,7 @@
 		3C89FD67207C799B002FC3D4 /* PointSDK-MinimalIntegrationExample-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				E1287E232D63F68D00C03DBB /* ChatAI */,
 				3C89FD68207C799B002FC3D4 /* AppDelegate.swift */,
 				78590060257DF5BE00162C94 /* AppDelegate+BDPBluedotServiceDelegate.swift */,
 				78590066257DF5BE00162C94 /* AppDelegate+BDPGeoTriggeringEventDelegate.swift */,
@@ -247,6 +264,53 @@
 				1F77A7FF24616F3F8BC71201 /* Pods-PointSDK-MinimalIntegrationExample-Swift.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1287E192D63F68D00C03DBB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E1287E172D63F68D00C03DBB /* Color+Extension.swift */,
+				E1287E182D63F68D00C03DBB /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E1287E1B2D63F68D00C03DBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1287E1A2D63F68D00C03DBB /* ChatMessage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1287E1D2D63F68D00C03DBB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E1287E1C2D63F68D00C03DBB /* ChatAIViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E1287E212D63F68D00C03DBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1287E1E2D63F68D00C03DBB /* ChatAIView.swift */,
+				E1287E1F2D63F68D00C03DBB /* ChatBubbleView.swift */,
+				E1287E202D63F68D00C03DBB /* FeedbackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1287E232D63F68D00C03DBB /* ChatAI */ = {
+			isa = PBXGroup;
+			children = (
+				E1287E192D63F68D00C03DBB /* Extensions */,
+				E1287E1B2D63F68D00C03DBB /* Models */,
+				E1287E1D2D63F68D00C03DBB /* ViewModels */,
+				E1287E212D63F68D00C03DBB /* Views */,
+				E1287E222D63F68D00C03DBB /* ChatAIViewController.swift */,
+			);
+			path = ChatAI;
 			sourceTree = "<group>";
 		};
 		E1741EF82354379800F7E78E /* PointSDK-MinimalUITests-Swift */ = {
@@ -565,6 +629,14 @@
 				78590083257DF9D400162C94 /* OnboardingViewController.swift in Sources */,
 				78590073257DF5BE00162C94 /* AppDelegate+BDPTempoTrackingDelegate.swift in Sources */,
 				E11A3CBE21ABB19900AD5102 /* UIAlertController+Actions.swift in Sources */,
+				E1287E242D63F68D00C03DBB /* Color+Extension.swift in Sources */,
+				E1287E252D63F68D00C03DBB /* ChatAIViewController.swift in Sources */,
+				E1287E262D63F68D00C03DBB /* ChatAIViewModel.swift in Sources */,
+				E1287E272D63F68D00C03DBB /* ChatBubbleView.swift in Sources */,
+				E1287E282D63F68D00C03DBB /* FeedbackView.swift in Sources */,
+				E1287E292D63F68D00C03DBB /* ChatMessage.swift in Sources */,
+				E1287E2A2D63F68D00C03DBB /* String+Extension.swift in Sources */,
+				E1287E2B2D63F68D00C03DBB /* ChatAIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,7 +722,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -677,7 +749,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -818,7 +890,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -846,7 +918,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "PointSDK-MinimalIntegrationExample-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -865,7 +937,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				INFOPLIST_FILE = "PointSDK-MinimalUITests-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -887,7 +959,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				INFOPLIST_FILE = "PointSDK-MinimalUITests-Swift/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -908,7 +980,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				INFOPLIST_FILE = "PointSDK-MinimalUITests-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -930,7 +1002,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9H7C75E224;
 				INFOPLIST_FILE = "PointSDK-MinimalUITests-Objc/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

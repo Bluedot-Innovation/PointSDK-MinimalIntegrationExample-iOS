@@ -1,12 +1,12 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '12.0'
+platform :ios, '15.0'
 
 target 'PointSDK-MinimalIntegrationExample-Objc' do
   use_frameworks!
 
   # Pods for PointSDK-MinimalIntegrationExample-Objc
-  pod 'BluedotPointSDK', '16.0.0'
+  pod 'BluedotPointSDK', '17.0.0'
 
 end
 
@@ -14,6 +14,6 @@ target 'PointSDK-MinimalIntegrationExample-Swift' do
   use_frameworks!
 
   # Pods for PointSDK-MinimalIntegrationExample-Swift
-  pod 'BluedotPointSDK', '16.0.0'
+  pod 'BluedotPointSDK', '17.0.0'
 
 end

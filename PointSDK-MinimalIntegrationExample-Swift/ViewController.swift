@@ -115,6 +115,10 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func openChatAIButtonTouchUpInside(_ sender: Any) {
+        let chatVC = ChatAIViewController()
+        navigationController?.pushViewController(chatVC, animated: true)
+    }
     
     private func showAlert(title: String,message: String) {
         //MARK:- Show Alert
