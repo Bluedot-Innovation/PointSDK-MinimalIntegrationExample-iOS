@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import BDPointSDK
+@preconcurrency import BDPointSDK
 
 @MainActor
 class ChatAIViewModel : ObservableObject {
