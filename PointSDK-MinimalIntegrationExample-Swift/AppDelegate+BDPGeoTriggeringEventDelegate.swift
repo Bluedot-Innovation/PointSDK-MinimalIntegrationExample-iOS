@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import BDPointSDK
+@preconcurrency import BDPointSDK
 
-extension AppDelegate: BDPGeoTriggeringEventDelegate {
+extension AppDelegate: @preconcurrency BDPGeoTriggeringEventDelegate {
     
     //MARK: Called whenever new BDZoneInfo is received from Canvas
     func didUpdateZoneInfo() {

@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import BDPointSDK
+@preconcurrency import BDPointSDK
 
-extension AppDelegate: BDPTempoTrackingDelegate {
+extension AppDelegate: @preconcurrency BDPTempoTrackingDelegate {
     
     func tempoTrackingDidUpdate(_ tempoUpdate: TempoTrackingUpdate) {
         

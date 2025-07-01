@@ -13,7 +13,7 @@ import CoreLocation
 import BDPointSDK
 import CoreBluetooth
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
@@ -58,10 +58,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BDLocationManager.instance()?.bluedotServiceDelegate = self
         BDLocationManager.instance()?.geoTriggeringEventDelegate = self
         BDLocationManager.instance()?.tempoTrackingDelegate = self
-        
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
-            if !accepted {
-                print("Notification access denied.")
+                
+        Task {
+            let center = UNUserNotificationCenter.current()
+            do {
+                if try await center.requestAuthorization(options: [.alert, .sound]) == true {
+                    print("Request Notification Permissions - Success")
+                } else {
+                    print("Request Notification Permissions - Success")
+                }
+                
+            } catch {
+                print("Request Notification Permissions - Error")
             }
         }
         
