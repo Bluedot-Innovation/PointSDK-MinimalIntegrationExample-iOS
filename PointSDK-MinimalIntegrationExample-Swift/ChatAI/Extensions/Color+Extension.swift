@@ -6,7 +6,7 @@
 //  Copyright © 2024 Bluedot Innovation. All rights reserved.
 //
 
-import SwiftUICore
+import SwiftUI
 
 extension Color {
     static let chatAIBackground =  Color(red: 242/255, green:242/255, blue: 247/255)
