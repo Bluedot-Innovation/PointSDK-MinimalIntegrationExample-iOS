@@ -73,15 +73,6 @@
                                     <action selector="stopGeotriggeringButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="56I-M1-aQC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1Q-d0-TZS">
-                                <rect key="frame" x="49" y="628" width="65" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Chat AI"/>
-                                <connections>
-                                    <action selector="openChatAIButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kma-e9-C5K"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

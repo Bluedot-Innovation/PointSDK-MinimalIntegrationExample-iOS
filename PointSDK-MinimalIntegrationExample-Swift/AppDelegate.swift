@@ -14,7 +14,7 @@ import BDPointSDK
 import CoreBluetooth
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     var window: UIWindow?
     
@@ -59,13 +59,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BDLocationManager.instance()?.geoTriggeringEventDelegate = self
         BDLocationManager.instance()?.tempoTrackingDelegate = self
         
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
-            if !accepted {
-                print("Notification access denied.")
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.delegate = self
+        notificationCenter.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            guard error == nil, granted else {
+                print("Notification access denied: \(error?.localizedDescription ?? "permission not granted")")
+                return
+            }
+
+            DispatchQueue.main.async {
+                application.registerForRemoteNotifications()
             }
         }
         
         return true
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        BDLocationManager.instance()?.pushNotifications.register(deviceToken)
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register for remote notifications: \(error.localizedDescription)")
+    }
+
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        willPresent notification: UNNotification
+    ) async -> UNNotificationPresentationOptions {
+        let handled = BDLocationManager.instance()?.pushNotifications.handleForeground(notification) ?? false
+        return handled ? [.banner, .sound] : []
+    }
+
+    func userNotificationCenter(
+        _ center: UNUserNotificationCenter,
+        didReceive response: UNNotificationResponse,
+        withCompletionHandler completionHandler: @escaping () -> Void
+    ) {
+        BDLocationManager.instance()?.pushNotifications.handleResponse(response)
+        completionHandler()
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
