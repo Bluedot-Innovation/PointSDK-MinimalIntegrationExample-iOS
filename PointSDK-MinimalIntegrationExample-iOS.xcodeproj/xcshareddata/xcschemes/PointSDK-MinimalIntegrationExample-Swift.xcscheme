@@ -41,16 +41,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1741EE82354367F00F7E78E"
-               BuildableName = "PointSDK Swift MinimalUITests.xctest"
-               BlueprintName = "PointSDK Swift MinimalUITests"
-               ReferencedContainer = "container:PointSDK-MinimalIntegrationExample-iOS.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "E1741EF62354379800F7E78E"
                BuildableName = "PointSDK-MinimalUITests-Swift.xctest"
                BlueprintName = "PointSDK-MinimalUITests-Swift"
