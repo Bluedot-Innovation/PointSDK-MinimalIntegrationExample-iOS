@@ -4,10 +4,9 @@ This project demonstrates the recommended integration approach for Bluedot Point
 
 ### Get started
 
-1. Run 'pod update' on a terminal.
-2. Open the PointSDK-MinimalIntegrationExample-iOS.xcworkspace in Xcode.
-3. Then, compile and run the project in either simulator or device.
-4. Paste your Project Id to ViewController in `Objc` or/and `Swift` project.
-5. Use a DestionationId from Canvas to enable Tempo tracking.
+1. Open `PointSDK-MinimalIntegrationExample-iOS.xcodeproj` in Xcode. Swift Package Manager will resolve the Bluedot Point SDK dependency automatically.
+2. Compile and run either app target in the simulator or on a device.
+3. Paste your Project ID into `ViewController` in the Objective-C and/or Swift project.
+4. Use a Destination ID from Canvas to enable Tempo tracking.
 
 Please refer to the documentation at http://docs.bluedot.io
